@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng s -o",
     "build": "ng build",
     "test": "jest --collectCoverage --watch",
     "lint": "ng lint",
@@ -45,8 +45,7 @@
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
-      "<rootDir>/dist/",
-      "<rootDir>/src/test.ts"
+      "<rootDir>/dist/"
     ],
     "globals": {
       "ts-jest": {
