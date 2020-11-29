@@ -17,19 +17,10 @@ module.exports = {
         'plugin:prettier/recommended'
       ],
       rules: {
-        'linebreak-style': 0,
-        'global-require': 0,
-        'eslint linebreak-style': [0, 'error', 'windows'],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'class-methods-use-this': 'off',
         'lines-between-class-members': 'off',
-        '@typescript-eslint/unbound-method': [
-          'error',
-          {
-            ignoreStatic: true,
-          }
-        ]
       }
     },
     {
