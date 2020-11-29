@@ -5,8 +5,8 @@ import { DetailProductComponent } from './modules/detail-product/detail-product.
 const routes: Routes = [{ path: 'detail', component: DetailProductComponent }];
 
 @NgModule({
-  declarations: [],
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+	declarations: [],
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
 export class AppRoutingModule {}
