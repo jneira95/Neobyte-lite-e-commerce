@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DetailProductComponent } from './modules/detail-product/detail-product.component';
@@ -21,8 +22,9 @@ import { HeaderComponent } from './shared/header/header.component';
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
-		MatDividerModule,
 		MatIconModule,
+		MatDividerModule,
+		IvyCarouselModule,
 		AppRoutingModule
 	],
 	providers: [],

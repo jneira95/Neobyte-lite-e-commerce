@@ -3,6 +3,7 @@
   <mat-divider class="divider"></mat-divider>
 
   <section class="image-gallery-container">
+
     <picture class="full-size-image">
       <button class="image-btn-navigation">
         <mat-icon class="navigation-icon">navigate_before</mat-icon>
@@ -13,13 +14,22 @@
         <mat-icon class="navigation-icon">navigate_next</mat-icon>
       </button>
     </picture>
+
     <section class="small-size-images">
+
+      <carousel [width]="300" [cellsToShow]="1" class="carousel-cell">
+          <img src="https://www.neobyte.es/24010-small_default/portatil-msi-ge75-9sf-1085es-i7-9750h-32gb-1tb-ssd.jpg" alt="product-img">
+          <img src="https://www.neobyte.es/24011-small_default/portatil-msi-ge75-9sf-1085es-i7-9750h-32gb-1tb-ssd.jpg" alt="product-img">
+          <img src="https://www.neobyte.es/24012-small_default/portatil-msi-ge75-9sf-1085es-i7-9750h-32gb-1tb-ssd.jpg" alt="product-img">
+          <img src="https://www.neobyte.es/24013-small_default/portatil-msi-ge75-9sf-1085es-i7-9750h-32gb-1tb-ssd.jpg" alt="product-img">
+      </carousel>
+
       <picture class="images-display">
-        <img src="https://www.neobyte.es/24010-small_default/portatil-msi-ge75-9sf-1085es-i7-9750h-32gb-1tb-ssd.jpg" alt="product-img"  class="images-display-mini">
         <img src="https://www.neobyte.es/24011-small_default/portatil-msi-ge75-9sf-1085es-i7-9750h-32gb-1tb-ssd.jpg" alt="product-img" class="images-display-mini">
         <img src="https://www.neobyte.es/24012-small_default/portatil-msi-ge75-9sf-1085es-i7-9750h-32gb-1tb-ssd.jpg" alt="product-img" class="images-display-mini">
         <img src="https://www.neobyte.es/24013-small_default/portatil-msi-ge75-9sf-1085es-i7-9750h-32gb-1tb-ssd.jpg" alt="product-img" class="images-display-mini">
       </picture>
+
     </section>
   </section>
 
