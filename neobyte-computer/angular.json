@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "neobyte-computer"
+  "defaultProject": "neobyte-computer",
+  "cli": {
+    "analytics": false
+  }
 }
