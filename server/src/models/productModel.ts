@@ -15,10 +15,4 @@ const productSchema = new Schema({
   generalDescription: { type: String },
 });
 
-class ProductModel extends model('product', productSchema) {
-  constructor(product: IProduct) {
-    super(product);
-  }
-}
-
-export default ProductModel;
+export default model<IProduct>('Product', productSchema, 'products', true);
