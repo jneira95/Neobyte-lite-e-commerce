@@ -1,23 +1,19 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
-import debug from 'debug';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
+import ProductModel from './models/productModel';
+import productsRouter from './routes/productRouter';
+import startServer from './server';
 
 const app = express();
-
-const port = process.env.PORT || 5000;
+const productRouter = productsRouter(ProductModel);
 
 app.use(cors());
 app.use(morgan('tiny'));
-app.use(debug('app'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get('/', (req: Request, res: Response) => {
-  res.status(200).send('Hello World!');
-});
+app.use('/product', productRouter);
 
-app.listen(8000, () => {
-  debug(`Server is running on port ${port}`);
-});
+startServer(app);
