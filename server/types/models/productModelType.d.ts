@@ -1,4 +1,6 @@
-interface IProduct {
+import { Document } from 'mongoose';
+
+interface ProductModel {
 name: string;
 reference: string;
 'part-number'?: string;
@@ -11,5 +13,7 @@ images: Array<string>;
 shortDescription: string;
 generalDescription: string;
 }
+
+interface IProduct extends ProductModel, Document {}
 
 export default IProduct;
