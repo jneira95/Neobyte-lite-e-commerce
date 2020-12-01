@@ -1,0 +1,17 @@
+import Debug from 'debug';
+import { Express } from 'express';
+import * as http from 'http';
+import { connect } from 'mongoose';
+
+const startServer = (app: Express) => {
+  const port = process.env.PORT || 5000;
+  const dbUrl = process.env.DBURL || 'mongodb+srv://jneira95:5o7harhz@cluster0.hykgh.mongodb.net/neobytecomputerDB?retryWrites=true&w=majority';
+  connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+  const server = http.createServer(app);
+  const debug = Debug('app');
+  server.listen(port, () => {
+    debug(`Server is running on port ${port}`);
+  });
+};
+
+export default startServer;
