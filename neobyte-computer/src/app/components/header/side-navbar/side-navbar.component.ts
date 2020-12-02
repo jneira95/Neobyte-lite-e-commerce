@@ -6,26 +6,73 @@ import { Component } from '@angular/core';
 	styleUrls: ['./side-navbar.component.scss']
 })
 export class SideNavbarComponent {
-	categories: Array<any> = [
+	panelOpenState = false;
+
+	categories: any[] = [
 		{
-			category: 'PORTÁTILES',
+			category: 'portátiles',
 			route: 'portatil',
-			icon: 'laptop_chromebook'
+			icon: 'laptop_chromebook',
+			categoriesExpand: ['portatiles', 'gaming', 'workStation']
 		},
 		{
-			category: 'PERIFÉRICOS',
+			category: 'periféricos',
 			route: 'perifericos',
-			icon: 'mouse'
+			icon: 'mouse',
+			categoriesExpand: ['teclados', 'ratones', 'monitores']
 		},
 		{
-			category: 'SMARTPHONES',
+			category: 'smartphones',
 			route: 'smartphones',
 			icon: 'smartphone'
 		},
 		{
-			category: 'COMPONENTES',
-			route: 'componentes',
-			icon: 'select_all'
+			category: 'elemento prueba scroll',
+			route: 'perifericos',
+			icon: 'mouse',
+			categoriesExpand: ['teclados', 'ratones', 'monitores']
+		},
+		{
+			category: 'elemento prueba scroll',
+			route: 'perifericos',
+			icon: 'mouse',
+			categoriesExpand: ['teclados', 'ratones', 'monitores']
+		},
+		{
+			category: 'elemento prueba scroll',
+			route: 'perifericos',
+			icon: 'mouse',
+			categoriesExpand: ['teclados', 'ratones', 'monitores']
+		},
+		{
+			category: 'elemento prueba scroll',
+			route: 'perifericos',
+			icon: 'mouse',
+			categoriesExpand: ['teclados', 'ratones', 'monitores']
+		},
+		{
+			category: 'elemento prueba scroll',
+			route: 'perifericos',
+			icon: 'mouse',
+			categoriesExpand: ['teclados', 'ratones', 'monitores']
+		},
+		{
+			category: 'elemento prueba scroll',
+			route: 'perifericos',
+			icon: 'mouse',
+			categoriesExpand: ['teclados', 'ratones', 'monitores']
+		},
+		{
+			category: 'elemento prueba scroll',
+			route: 'perifericos',
+			icon: 'mouse',
+			categoriesExpand: ['teclados', 'ratones', 'monitores']
+		},
+		{
+			category: 'elemento prueba scroll',
+			route: 'perifericos',
+			icon: 'mouse',
+			categoriesExpand: ['teclados', 'ratones', 'monitores']
 		}
 	];
 

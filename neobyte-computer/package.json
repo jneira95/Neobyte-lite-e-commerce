@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng s -o",
+    "start": "ng s",
+    "start-new": "ng s -o",
     "build": "ng build",
     "test": "jest --collectCoverage --watch"
   },
