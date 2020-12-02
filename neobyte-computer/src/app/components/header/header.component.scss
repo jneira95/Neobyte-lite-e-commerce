@@ -1,0 +1,29 @@
+.header-container {
+  padding: 20px 20px 0 20px;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    .navbar-left-side {
+      display: contents;
+     
+      .navbar-logo-container > img {
+      width: 170px;
+      }
+      .left-side-icon  {
+        font-size: 2rem;
+      }
+    }
+    .navbar-right-side {
+      .right-side-btn {
+        margin-left: 10px;
+      }
+      .right-side-icon {
+        transition: .2s;
+        font-size: 1.8rem;
+      }
+      .right-side-icon:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+}
