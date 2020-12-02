@@ -10,6 +10,13 @@ li {
   list-style: none;
 }
 
+a:active,
+a:link,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
 html, 
 body { 
   height: 100%; 
@@ -18,4 +25,10 @@ body {
 body { 
   margin: 0; 
   font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: none;
 }

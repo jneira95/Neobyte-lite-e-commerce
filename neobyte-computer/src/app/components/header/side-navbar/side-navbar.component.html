@@ -1,0 +1,19 @@
+<section class="side-navbar-container"  id="toogleSideBar">
+	<div class="sidebar-close-wrapper">
+		<button class="btn sidebar-close-btn" (click)="closeSidebar()">
+			<mat-icon>close</mat-icon>
+		</button>
+	</div>
+	<mat-divider class="sidebar-divider"></mat-divider>
+	<nav class="sidebar-navigation">
+		<ul>
+			<li *ngFor="let listItem of categories" class="navigation-links">
+				<mat-icon class="navigation-link-icon">{{ listItem.icon }}</mat-icon>
+					<a [routerLink]="listItem.route" routerLinkActive="active" class="navigation-link">
+					{{ listItem.category }}
+				</a>
+				<mat-divider class="sidebar-divider"></mat-divider>
+			</li>
+		</ul>
+	</nav>
+</section>
