@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetailProductComponent } from './modules/detail-product/detail-product.component';
-import { HeaderComponent } from './core/header/header.component';
+import { DetailProductComponent } from './components/detail-product/detail-product.component';
 
 const routes: Routes = [
-	{ path: '', component: HeaderComponent },
-	{ path: 'detail', component: DetailProductComponent }
-	// { path: '', redirectTo: '/detail', pathMatch: 'full' }
+	{ path: 'detail', component: DetailProductComponent },
+	{ path: '', redirectTo: '/detail', pathMatch: 'full' }
 ];
 
 @NgModule({
