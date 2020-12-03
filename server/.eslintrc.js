@@ -16,6 +16,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'no-underscore-dangle': 'off',
     'import/no-unresolved': 0,
     'linebreak-style': 0,
     'global-require': 0,

@@ -4,6 +4,7 @@ import { DetailProductComponent } from './components/detail-product/detail-produ
 
 const routes: Routes = [
 	{ path: 'detail', component: DetailProductComponent },
+	{ path: 'detail/:id', component: DetailProductComponent },
 	{ path: '', redirectTo: '/detail', pathMatch: 'full' }
 ];
 

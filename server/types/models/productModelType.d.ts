@@ -11,7 +11,7 @@ stock?: number;
 images: Array<string>;
 'general-specs'?: Array<string>;
 shortDescription: string;
-generalDescription: Array<string>;
+generalDescription: Array;
 }
 
 interface IProduct extends ProductModel, Document {}
