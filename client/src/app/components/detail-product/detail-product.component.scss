@@ -1,36 +1,6 @@
 .container {
+  margin-top: 100px;
   padding: 0 20px;
-  .image-gallery-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    .full-size-image {
-      display: flex;
-      align-items: center;
-      .image-btn-navigation {
-        margin: 0  auto;
-        z-index: 1;
-        outline: none;
-        border: none;
-        .navigation-icon {
-          font-size: 30px;
-        }
-      }
-      .image {
-        width: 300px;
-      }
-    }
-    .small-size-images {
-      .images-display {
-        display: flex;
-        justify-content: space-between;
-        .images-display-mini {
-          max-width: 60px;
-            margin: 0 5px;
-        }
-      }
-    }
-  }
   .product-description {
     padding: 0 20px;
   }

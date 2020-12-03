@@ -5,7 +5,7 @@ function productRouter(productModel: any) {
   const router = Router();
   const products = productController(productModel);
 
-  router.route('/')
+  router.route('/:id')
     .get(products.getProductById);
 
   return router;

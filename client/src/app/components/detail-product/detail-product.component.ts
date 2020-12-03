@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core'
-// import { ActivatedRoute } from '@angular/router';
-// import { ProductService } from '../../services/product.service';
+import { Component } from '@angular/core'
+import { Observable } from 'rxjs'
+import { ActivatedRoute } from '@angular/router'
+import { ProductService } from '../../services/product.service'
+import { ProductItem } from '../../store/models/product-item-model'
+
 @Component({
   selector: 'app-detail-product',
   templateUrl: './detail-product.component.html',
   styleUrls: ['./detail-product.component.scss']
 })
-export class DetailProductComponent implements OnInit {
-  constructor () {} // private route: ActivatedRoute // private productService: ProductService,
+export class DetailProductComponent {
+  constructor (
+  private route: ActivatedRoute,
+  private productService: ProductService
+  ) {}
 
-  ngOnInit (): void {}
-
-  getClickTest (): void {
-    // const id = +this.route.snapshot.paramMap.get('id');
-    // this.ProductService.getHero(id).subscribe((product) => {
-    // this.product = product;
-    // });
+  get paramId (): string {
+    return this.route.snapshot.paramMap.get('id')
   }
+
+  product$: Observable<ProductItem> = this.productService.getProductById(this.paramId);
 }
