@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Asus GX550LXS-HF073T - Portátil 15 i7-10875H 32GB RTX 2080 SUPER 1TB",
+    "reference": " GX550LXS-HF073T",
+    "part-number": "90NR02Z1-M02620",
+    "ean": "999999999",
+    "price": "3489",
+    "stock": "10",
+    "product-status": "boolean",
+    "images": [
+      "https://www.neobyte.es/37175-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+      "https://www.neobyte.es/37176-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+      "https://www.neobyte.es/37177-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+      "https://www.neobyte.es/37178-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+      "https://www.neobyte.es/37179-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg"
+    ],
+    "general-specs": [
+      "Intel Core i7-10875H",
+      "ScreenPad Plus: 14.1 4K Multitáctil",
+      "Memoria RAM: 32GB / 1TB SSD",
+      "NVIDIA RTX 2080 SUPER"
+    ],
+    "shortDescription": "Con el Asus GX550LXS-HF073T Zephyrus Duo 15 supera todos los límites, tanto para trabajar como para jugar. Un innovador portátil con ROG ScreenPad Plus, una pantalla secundaria inclinada 13º facilita la multitarea y cuenta con aplicaciones desarrolladas para optimizar tu flujo de trabajo. En el apartado de rendimiento, el Asus GX550LXS-HF073T Zephyrus Duo 15 va con todo. Equipado con procesador Intel Core i7 de 10ª generación, gráfica Nvidia RTX 2080 Super y 32GB de RAM, este modelo se atreve con las tareas más exigentes, desde proyectos creativos a streamings a velocidades increíbles. Y es que los desafíos no son problema para él. Gracias a su sistema de refrigeración es posible optimizar el flujo de aire y la disipación de forma automática, evitando que las altas temperaturas incidan en el funcionamiento del equipo. Descubre las infinitas posibilidades de este portátil en Neobyte.",
+    "generalDescription": [
+      {
+        "caracteristics": {
+          "name": "Características",
+          "content": [
+            "Procesador: Intel Core i7-10875H (8 Núcleos, 16 Subprocesos, Caché: 16MB SmartCache, hasta 5.10GHz, 64-bit)",
+            "Pantalla 15.6 (39,62cm) / LED Retroiluminado / FHD (1920x1080/16:9) / 300Hz / 300nits / 3ms / Antirreflejos / NTSC 72% / SRGB 100% / Adobe 75,35% / Contraste 1000:1 / IPS / Ángulo de Visión de 85°/85°/85°/85°",
+            "ROG ScreenPad™ Plus:14.1 (35,81cm) LED Retroiluminado / 60Hz / NanoEdge (Borde Estrecho) / 4K UHD (3840X1100/32:9) / Multitáctil",
+            "Memoria RAM: 32GB (16GB + 16GB [EN PLACA]) DDR4 3200MHz",
+            "Almacenamiento: 1TB SSD M.2 NVMe™ PCIe® 3.0 Performance",
+            "Tarjeta gráfica: NVIDIA GeForce RTX 2080 SUPER 8GB GDDR6 con Diseño Max-Q",
+            "Altavoces estéreo integrados: Sí, 2 x 4W",
+            "Micrófono integrado: Sí",
+            "Batería: 90Wh, 4 Celdas, Polímeros de Litio"
+          ]
+        },
+        "os": {
+          "name": "Sistema Operativo",
+          "content": ["Windows® 10 Home (64Bits)"]
+        },
+        "conectivity": {
+          "name": "Conectividad y redes",
+          "content": [
+            "2 x USB 3.2 Gen1",
+            "1 x USB 3.2 Gen2",
+            "1 x Thunderbolt™ 3 USB-C (USB-C 3.2 Gen2/DisplayPort™ 1.4/Entrega de Alimentación/G-Sync)",
+            "1 x Conector de Audio Combinado Auriculares/Micrófono 3,5mm",
+            "1 x Entrada Micrófono 3,5mm",
+            "1 x Conector RJ45 LAN",
+            "1 x HDMI 2.0b",
+            "1 x Entrada de Corriente",
+            "Intel Wi-Fi 6 (Gig+)(802.11ax) 2x2 RangeBoost",
+            "Bluetooth 5.0 (La Versión puede cambiar en función de las actualizaciones del SO)"
+          ]
+        },
+        "dimension": {
+          "name": "Dimensiones",
+          "content": ["360 x 268 x 20,9 mm"]
+        },
+        "weight": {
+          "name": "Peso",
+          "content": ["2,48 Kg (con batería de 4 celdas)"]
+        }
+      }
+    ]
+  }
+]

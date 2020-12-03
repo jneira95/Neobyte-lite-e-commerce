@@ -12,7 +12,7 @@ const productSchema = new Schema({
   images: { type: [String] },
   'general-specs': { type: [String] },
   shortDescription: { type: String },
-  generalDescription: { type: String },
+  generalDescription: { type: [] },
 });
 
 export default model<IProduct>('Product', productSchema, 'products', true);
