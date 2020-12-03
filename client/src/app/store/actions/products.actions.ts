@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 import { Action } from '@ngrx/store';
-import { ProductItem } from '../models/product-item.model';
+import { ProductItem } from '../models/product-item-model';
 import actionTypes from './actionTypes';
 
 export class LoadProductItem implements Action {

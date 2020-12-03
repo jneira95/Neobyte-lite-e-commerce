@@ -9,5 +9,5 @@ export interface ProductItem {
 	images: Array<string>;
 	'general-specs'?: Array<string>;
 	shortDescription: string;
-	generalDescription: string;
+	generalDescription: Array<any>;
 }
