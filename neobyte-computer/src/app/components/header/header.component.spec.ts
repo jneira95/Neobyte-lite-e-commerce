@@ -15,10 +15,12 @@ describe('HeaderComponent', () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(HeaderComponent);
 		component = fixture.componentInstance;
+		console.log(component);
+
 		fixture.detectChanges();
 	});
 
-	it('should create', () => {
-		expect(component).toBeTruthy();
+	test('should create', () => {
+		expect(HeaderComponent).toBeDefined();
 	});
 });

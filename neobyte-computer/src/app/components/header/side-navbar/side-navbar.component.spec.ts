@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SideNavbarComponent } from './side-navbar.component';
 
 describe('SideNavbarComponent', () => {
-	let component: SideNavbarComponent;
+	// let component: SideNavbarComponent;
 	let fixture: ComponentFixture<SideNavbarComponent>;
 
 	beforeEach(async () => {
@@ -14,11 +14,11 @@ describe('SideNavbarComponent', () => {
 
 	beforeEach(() => {
 		fixture = TestBed.createComponent(SideNavbarComponent);
-		component = fixture.componentInstance;
+		// component = fixture.componentInstance;
 		fixture.detectChanges();
 	});
 
 	it('should create', () => {
-		expect(component).toBeTruthy();
+		expect(SideNavbarComponent).toBeTruthy();
 	});
 });
