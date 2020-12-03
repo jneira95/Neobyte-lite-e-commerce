@@ -10,13 +10,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DetailProductComponent } from './components/detail-product/detail-product.component';
 import { SideNavbarComponent } from './components/header/side-navbar/side-navbar.component';
-// import { FooterComponent } from './components/footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HeaderComponent,
-		// FooterComponent,
+		FooterComponent,
 		SideNavbarComponent,
 		DetailProductComponent
 	],
@@ -24,10 +24,10 @@ import { SideNavbarComponent } from './components/header/side-navbar/side-navbar
 		BrowserModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
-		MatIconModule,
 		MatToolbarModule,
 		MatDividerModule,
-		MatExpansionModule
+		MatExpansionModule,
+		MatIconModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

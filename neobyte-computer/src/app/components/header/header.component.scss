@@ -1,16 +1,25 @@
 .header-container {
-  padding: 20px 20px 0 20px;
+  box-shadow: 0px 10px 50px -30px rgba(0,0,0,0.25);
+  background: #ffffff;
+  position: absolute;
+  position: fixed;
+  padding: 20px;
+  width: 100%;
+  z-index: 5;
+  top: 0;
   .navbar {
     display: flex;
     justify-content: space-between;
     .navbar-left-side {
       display: contents;
-     
       .navbar-logo-container > img {
       width: 170px;
+      cursor: pointer;
+
       }
       .left-side-icon  {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        cursor: pointer;
       }
     }
     .navbar-right-side {
@@ -18,8 +27,9 @@
         margin-left: 10px;
       }
       .right-side-icon {
-        transition: .2s;
+        transition: ease .1s;
         font-size: 1.8rem;
+        cursor: pointer;
       }
       .right-side-icon:hover {
         transform: scale(1.3);
