@@ -1,11 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core'
 
-export interface IImagesGallery {
-  images: string[];
-  length: any
-  slice: any
-}
-
 @Component({
   selector: 'app-images-gallery',
   templateUrl: './images-gallery.component.html',
@@ -17,7 +11,7 @@ export class ImagesGalleryComponent implements OnInit {
     this.currentLargeImg = 0
   }
 
-  @Input() images: IImagesGallery
+  @Input() images: string[]
 
   currentLargeImg: number
 

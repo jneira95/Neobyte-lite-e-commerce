@@ -15,7 +15,8 @@ module.exports = {
     '@typescript-eslint', 'html'
   ],
   rules: {
-    // 'linebreak-style': 0,
+    'no-tabs': 0,
+    'linebreak-style': 0,
     'global-require': 0,
     'eslint linebreak-style': [0, 'error', 'windows'],
     'class-methods-use-this': 'off',

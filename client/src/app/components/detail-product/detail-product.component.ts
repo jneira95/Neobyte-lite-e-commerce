@@ -11,13 +11,15 @@ import { ProductItem } from '../../store/models/product-item-model'
 })
 export class DetailProductComponent {
   constructor (
-  private route: ActivatedRoute,
-  private productService: ProductService
+    private route: ActivatedRoute,
+    private productService: ProductService
   ) {}
 
   get paramId (): string {
     return this.route.snapshot.paramMap.get('id')
   }
 
-  product$: Observable<ProductItem> = this.productService.getProductById(this.paramId);
+  product$: Observable<ProductItem> = this.productService.getProductById(
+    this.paramId
+  );
 }
