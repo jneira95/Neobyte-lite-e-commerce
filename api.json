@@ -6,7 +6,7 @@
     "ean": "999999999",
     "price": "3489",
     "stock": "10",
-    "product-status": "boolean",
+    "product-status": true,
     "images": [
       "https://www.neobyte.es/37175-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
       "https://www.neobyte.es/37176-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
@@ -23,7 +23,7 @@
     "shortDescription": "Con el Asus GX550LXS-HF073T Zephyrus Duo 15 supera todos los límites, tanto para trabajar como para jugar. Un innovador portátil con ROG ScreenPad Plus, una pantalla secundaria inclinada 13º facilita la multitarea y cuenta con aplicaciones desarrolladas para optimizar tu flujo de trabajo. En el apartado de rendimiento, el Asus GX550LXS-HF073T Zephyrus Duo 15 va con todo. Equipado con procesador Intel Core i7 de 10ª generación, gráfica Nvidia RTX 2080 Super y 32GB de RAM, este modelo se atreve con las tareas más exigentes, desde proyectos creativos a streamings a velocidades increíbles. Y es que los desafíos no son problema para él. Gracias a su sistema de refrigeración es posible optimizar el flujo de aire y la disipación de forma automática, evitando que las altas temperaturas incidan en el funcionamiento del equipo. Descubre las infinitas posibilidades de este portátil en Neobyte.",
     "generalDescription": [
       {
-        "caracteristics": {
+        "description": {
           "name": "Características",
           "content": [
             "Procesador: Intel Core i7-10875H (8 Núcleos, 16 Subprocesos, Caché: 16MB SmartCache, hasta 5.10GHz, 64-bit)",
@@ -36,12 +36,16 @@
             "Micrófono integrado: Sí",
             "Batería: 90Wh, 4 Celdas, Polímeros de Litio"
           ]
-        },
-        "os": {
+        }
+      },
+      {
+        "description": {
           "name": "Sistema Operativo",
           "content": ["Windows® 10 Home (64Bits)"]
-        },
-        "conectivity": {
+        }
+      },
+      {
+        "description": {
           "name": "Conectividad y redes",
           "content": [
             "2 x USB 3.2 Gen1",
@@ -55,14 +59,90 @@
             "Intel Wi-Fi 6 (Gig+)(802.11ax) 2x2 RangeBoost",
             "Bluetooth 5.0 (La Versión puede cambiar en función de las actualizaciones del SO)"
           ]
-        },
-        "dimension": {
+        }
+      },
+      {
+        "description": {
           "name": "Dimensiones",
           "content": ["360 x 268 x 20,9 mm"]
-        },
-        "weight": {
+        }
+      },
+      {
+        "description": {
           "name": "Peso",
           "content": ["2,48 Kg (con batería de 4 celdas)"]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Asus G512LW-HN038 - Portátil 15 i7-10750H 16GB RTX2070 512SSD",
+    "reference": "G512LW-HN038",
+    "part-number": "90NR0391-M00950",
+    "ean": "999999999",
+    "price": "1629",
+    "stock": "10",
+    "product-status": true,
+    "images": [
+      "https://www.neobyte.es/32697-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+      "https://www.neobyte.es/32698-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+      "https://www.neobyte.es/32693-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+      "https://www.neobyte.es/32694-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+      "https://www.neobyte.es/32695-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg"
+    ],
+    "general-specs": [
+      "Intel Core i7-10750H",
+      "16GB RAM / 512GB SSD",
+      "Nvidia GeForce RTX 2070 8GB GDDR6",
+      "15.6 Full HD IPS 144Hz"
+    ],
+    "shortDescription": "El Asus G512LW-HN038 ROG Strix G15 está preparado para todo lo que imaginas y más. ¡Puede ser tuyo en Neobyte con las máximas garantías y al precio más competitivo! Con un diseño deslumbrante y de vanguardia, este portátil de 15.6 se atreve con todo tipo de juegos y programas, incluso los más exigentes. Para ello, Asus lo ha equipado con un procesador Intel Core i7-10750H de 10ª generación y 6 núcleos, 16GB de RAM, SSD de 512GB y gráfica Nvidia GeForce RTX 2070 8GB GDDR6, garantía de potencia e innovación. Así mismo, señalar que el Asus G512LW-HN038 ROG Strix G15 ha sido provisto de una espectacular pantalla Full HD IPS que alcanza una tasa de refresco de 144Hz, lo que se traduce en una calidad de imagen y fluidez impresionantes.",
+    "generalDescription": [
+      {
+        "description": {
+          "name": "Características",
+          "content": [
+            "Procesador Intel® Core™ i7-10750H (6 Núcleos, 12 Subprocesos, Caché: 12MB SmartCache, 2.60GHz hasta 5.00GHz, 64-bit)",
+            "Memoria RAM 16GB (8GB + 8GB) DDR4 2933MHz",
+            "Gráfica NVIDIA® GeForce® RTX™ 2070 8GB GDDR6",
+            "Almacenamiento: 512GB SSD M.2 PCIe® 3.0 NVMe",
+            "Pantalla: 15.6 (39,62cm) / FHD (1920x1080) / LED Retroiluminado / 144Hz / 250 nits / Antirreflejos / NTSC 45% / sRGB 67% / Adobe 50% / 1000:1 / IPS-level",
+            "Bateria: 66Wh, 4 Celdas, Polímero de Lítio",
+            "Audio: 2 Altavoces Estéreo de 4.2W Integrados Micrófono de Matriz Intregado Tecnología Smart Amp"
+          ]
+        }
+      },
+      {
+        "description": {
+          "name": "Sistema Operativo",
+          "content": ["FreeDos (Sin Sistema)"]
+        }
+      },
+      {
+        "description": {
+          "name": "Conectividad y redes",
+          "content": [
+            " 3 x USB 3.2 (GEN1)",
+            "1 x USB-C 3.2 (GEN2) / DisplayPort / G-Sync",
+            "1 x Salida Auriculares/Entrada Micrófono 3.5mm (combo)",
+            "1 x Conector RJ45",
+            "1 x HDMI 2.0b",
+            "1 x Entrada de Corriente",
+            "Wi-Fi 6 (Gig+) (802.11ax) 2x2 RangeBoost",
+            "Bluetooth® 5.0"
+          ]
+        }
+      },
+      {
+        "description": {
+          "name": "Dimensiones",
+          "content": ["360 x 275 x 25.8 mm"]
+        }
+      },
+      {
+        "description": {
+          "name": "Peso",
+          "content": ["2.39 Kg (con batería de 8 celdas)"]
         }
       }
     ]
