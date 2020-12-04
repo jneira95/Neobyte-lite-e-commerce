@@ -15,6 +15,11 @@ import { SearchComponent } from './components/header/search/search.component'
 import { HttpClientModule } from '@angular/common/http'
 import { ImagesGalleryComponent } from './components/detail-product/images-gallery/images-gallery.component'
 import { MatButtonModule } from '@angular/material/button'
+import { PriceDisplayComponent } from './components/detail-product/price-display/price-display.component'
+import { ProductShippingInfoComponent } from './components/detail-product/product-shipping-info/product-shipping-info.component'
+import { ProductGeneralSpecsComponent } from './components/detail-product/product-general-specs/product-general-specs.component'
+import { ProductFeaturePaymentsComponent } from './components/detail-product/product-feature-payments/product-feature-payments.component'
+import { ProductDescriptionComponent } from './components/detail-product/product-description/product-description.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { MatButtonModule } from '@angular/material/button'
     SideNavbarComponent,
     DetailProductComponent,
     SearchComponent,
-    ImagesGalleryComponent
+    ImagesGalleryComponent,
+    PriceDisplayComponent,
+    ProductShippingInfoComponent,
+    ProductGeneralSpecsComponent,
+    ProductFeaturePaymentsComponent,
+    ProductDescriptionComponent
   ],
   imports: [
     HttpClientModule,
