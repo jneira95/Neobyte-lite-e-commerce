@@ -15,7 +15,7 @@ export class ProductService {
   private productEndpoint = '/product';
 
   getProductById (id: string): Observable<IProductItem> {
-	  const url = `${this.mainEndpoint}${this.productEndpoint}/${id}`
-	  return this.http.get<IProductItem>(url)
+    const url = `${this.mainEndpoint}${this.productEndpoint}/${id}`
+    return this.http.get<IProductItem>(url)
   }
 }
