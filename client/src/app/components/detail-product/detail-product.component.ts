@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 import { Observable } from 'rxjs'
 import { ActivatedRoute } from '@angular/router'
 import { ProductService } from '../../services/product.service'
-import { ProductItem } from '../../store/models/product-item-model'
+import { IProductItem } from '../../store/models/product-item-model'
 
 @Component({
   selector: 'app-detail-product',
@@ -19,7 +19,7 @@ export class DetailProductComponent {
     return this.route.snapshot.paramMap.get('id')
   }
 
-  product$: Observable<ProductItem> = this.productService.getProductById(
+  product$: Observable<IProductItem> = this.productService.getProductById(
     this.paramId
   );
 }

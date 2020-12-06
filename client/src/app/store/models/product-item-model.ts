@@ -1,4 +1,4 @@
-export interface ProductItem {
+export interface IProductItem {
   name: string;
   reference: string;
   'part-number'?: string;
@@ -10,5 +10,5 @@ export interface ProductItem {
   images: Array<string>;
   'general-specs'?: Array<string>;
   shortDescription: string;
-  generalDescription: Array<any>;
+  generalDescription: Array<object>;
 }

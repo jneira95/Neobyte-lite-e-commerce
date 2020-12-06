@@ -1,5 +1,5 @@
-import { ProductItem } from './product-item-model'
+import { IProductItem } from './product-item-model'
 
 export interface AppState {
-readonly product: Array<ProductItem>;
+readonly product: Array<IProductItem>;
 }
