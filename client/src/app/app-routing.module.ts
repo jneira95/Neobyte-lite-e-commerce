@@ -4,7 +4,7 @@ import { DetailProductComponent } from './components/detail-product/detail-produ
 
 const routes: Routes = [
   { path: 'detail/:id', component: DetailProductComponent },
-  { path: '', redirectTo: '/detail/5fc8a5da1ecafd082aa42a68', pathMatch: 'full' }
+  { path: '', redirectTo: '/detail/', pathMatch: 'full' }
 ]
 
 @NgModule({
