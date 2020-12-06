@@ -13,7 +13,7 @@ function userRouter(UserModel: any) {
   router.route('/login')
     .post(validator.loginValidation, users.userLogIn);
 
-  router.route('/me')
+  router.route('/profile')
     .get(tokenValidation, users.tokenValidation);
 
   return router;
