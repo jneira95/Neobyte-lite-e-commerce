@@ -1,16 +1,15 @@
 import jwt from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
 
-function tokenValidation(req: Request, res: Response, next: NextFunction) {
+export default function tokenValidation(req: Request, res: Response, next: NextFunction) {
   const token: any = req.header('token');
-  if (!token) res.status(401).json({ message: 'Auth Error' });
+  if (!token) return res.status(401).json({ message: 'AUTH_ERROR' });
   try {
     const decoded:any = jwt.verify(token, 'secret');
-    req.user = decoded.user;
+    req.body.user = decoded.id;
     next();
   } catch (error) {
-    res.status(500).send({ message: 'Invalid Token' });
+    res.status(500).send({ message: 'INVALID_TOKEN' });
   }
+  return true;
 }
-
-export default tokenValidation;

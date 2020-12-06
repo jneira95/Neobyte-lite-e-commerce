@@ -1,7 +1,6 @@
 import { Router } from 'express';
 import userController from '../controllers/users/userController';
-import signupValidation from '../validator/signupValidator';
-import loginValidation from '../validator/loginValidator';
+import validator from '../validator/userValidator';
 import tokenValidation from '../validator/tokenValidator';
 
 function userRouter(UserModel: any) {
@@ -9,10 +8,10 @@ function userRouter(UserModel: any) {
   const users = userController(UserModel);
 
   router.route('/signup')
-    .post(signupValidation, users.userSignUp);
+    .post(validator.signupValidation, users.userSignUp);
 
   router.route('/login')
-    .post(loginValidation, users.userLogIn);
+    .post(validator.loginValidation, users.userLogIn);
 
   router.route('/me')
     .get(tokenValidation, users.tokenValidation);
