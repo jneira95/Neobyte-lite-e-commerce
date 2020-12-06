@@ -7,17 +7,23 @@
     "devStart": "set DEBUG=app && nodemon ./src/server.ts",
     "start": "node ./build/index.js",
     "build": "tsc",
+    "debug": "node --inspect-brk index.ts --runInBand",
     "test": "jest --collectCoverage --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^8.5.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "chalk": "^4.1.0",
     "cors": "^2.8.5",
     "debug": "^4.3.1",
     "express": "^4.17.1",
+    "express-validator": "^6.7.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.0",
     "morgan": "^1.10.0"
   },

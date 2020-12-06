@@ -1,5 +1,5 @@
 import { model, Schema } from 'mongoose';
-import IProduct from '../../types/models/productModelType';
+import IProduct from '../../@types/models/productModelType';
 
 const productSchema = new Schema({
   name: { type: String, required: true },
