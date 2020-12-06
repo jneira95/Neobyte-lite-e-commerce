@@ -19,7 +19,9 @@ import { PriceDisplayComponent } from './components/detail-product/price-display
 import { ProductShippingInfoComponent } from './components/detail-product/product-shipping-info/product-shipping-info.component'
 import { ProductGeneralSpecsComponent } from './components/detail-product/product-general-specs/product-general-specs.component'
 import { ProductFeaturePaymentsComponent } from './components/detail-product/product-feature-payments/product-feature-payments.component'
-import { ProductDescriptionComponent } from './components/detail-product/product-description/product-description.component'
+import { ProductDescriptionComponent } from './components/detail-product/product-description/product-description.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ProductDescriptionComponent } from './components/detail-product/product
     ProductShippingInfoComponent,
     ProductGeneralSpecsComponent,
     ProductFeaturePaymentsComponent,
-    ProductDescriptionComponent
+    ProductDescriptionComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     HttpClientModule,
