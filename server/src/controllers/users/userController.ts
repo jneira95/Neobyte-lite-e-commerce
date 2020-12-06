@@ -7,7 +7,8 @@ function userController(UserModel: any) {
     const { username, email, password } = req.body;
     try {
       const isUserRegistered = await UserModel.exists({ email });
-      if (isUserRegistered) res.status(400).json({ msg: 'User Already Exists' });
+      if (isUserRegistered) return res.status(400).json({ msg: 'USER_ALREADY_EXIST' });
+
       const user = new UserModel({
         username,
         email,
@@ -18,10 +19,10 @@ function userController(UserModel: any) {
       user.password = await bcrypt.hash(password, salt);
 
       await UserModel.create(user);
+
+      const { id } = user;
       const payload = {
-        user: {
-          id: user.id,
-        },
+        id,
       };
 
       jwt.sign(payload, 'secret', { expiresIn: 10000 },
@@ -30,26 +31,23 @@ function userController(UserModel: any) {
           res.status(200).json({ token });
         });
     } catch (error) {
-      res.status(500).send('Error in Saving');
+      res.status(500).send('ERROR_SAVING_USER');
     }
-    return console.log('end');
+    return true;
   };
 
   const userLogIn = async (req: Request, res: Response) => {
     const { email, password } = req.body;
-    console.log(email, password);
-
     try {
       const user = await UserModel.findOne({ email });
-      if (!user) res.status(400).json({ msg: 'User Not Exist' });
+      if (!user) return res.status(400).json({ msg: 'USER_NOT_EXIST' });
 
       const isMatch = await bcrypt.compare(password, user.password);
-      if (!isMatch) res.status(400).json({ msg: 'Incorrect Password !' });
+      if (!isMatch) res.status(400).json({ msg: 'INCORRECT_PASSWORD' });
 
+      const { id } = user;
       const payload = {
-        user: {
-          id: user.id,
-        },
+        id,
       };
 
       jwt.sign(payload, 'secret', { expiresIn: 3600 },
@@ -58,17 +56,18 @@ function userController(UserModel: any) {
           res.status(200).json({ token });
         });
     } catch (error) {
-      res.status(500).json({ msg: 'Server Error' });
+      res.status(500).json({ msg: 'INTERNAL_SERVER_ERROR' });
     }
-    return console.log('done');
+    return true;
   };
 
   const tokenValidation = async (req: Request, res: Response) => {
     try {
-      const user = await UserModel.findById(req.user);
+      const query = req.body.user;
+      const user = await UserModel.findById(query);
       res.json(user);
-    } catch (e) {
-      res.send({ message: 'Error in Fetching user' });
+    } catch (error) {
+      res.send({ msg: 'ERROR_FETCHING_USER' });
     }
   };
 
