@@ -29,3 +29,7 @@
   </label>
   <button type="submit" [disabled]="!loginForm.valid">Submit</button>
 </form>
+<button [routerLink]="['/register']" routerLinkActive="active">register</button>
+<ng-container *ngIf="pruebas.length !== 0">
+  <div *ngFor="let prueba of pruebas"> {{ prueba }} </div>
+</ng-container>
