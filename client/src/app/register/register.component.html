@@ -1,1 +1,46 @@
-<p>register works!</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <label>
+    Usuario:
+    <input 
+    type="text" 
+    name="username" 
+    id="username"
+    placeholder="Usuario"
+    formControlName="username"
+    />
+  </label>
+
+  <label>
+    Email:
+    <input 
+    type="email" 
+    name="email" 
+    id="email"
+    placeholder="tu@email.com"
+    formControlName="email"
+    />
+  </label>
+
+  <label>
+    Password:
+    <input 
+    type="password" 
+    name="password" 
+    id="password"
+    placeholder="Clave"
+    formControlName="password"
+    />
+  </label>
+  <button type="submit" [disabled]="!registerForm.valid">Submit</button>
+</form>
+<ng-container *ngIf="pruebas.length !== 0">
+  <div *ngFor="let prueba of pruebas"> {{ prueba }} </div>
+</ng-container>
