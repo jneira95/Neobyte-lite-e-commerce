@@ -7,7 +7,7 @@ function userController(UserModel: any) {
     const { username, email, password } = req.body;
     try {
       const isUserRegistered = await UserModel.exists({ email });
-      if (isUserRegistered) return res.status(400).json({ msg: 'USER_ALREADY_EXIST' });
+      if (isUserRegistered) return res.status(400).json({ errors: [{ msg: 'USER_ALREADY_EXIST' }] });
 
       const user = new UserModel({
         username,
@@ -31,7 +31,7 @@ function userController(UserModel: any) {
           res.status(200).json({ token });
         });
     } catch (error) {
-      res.status(500).send('ERROR_SAVING_USER');
+      res.status(500).json({ errors: [{ msg: 'ERROR_SAVING_USER' }] });
     }
     return true;
   };
@@ -40,10 +40,10 @@ function userController(UserModel: any) {
     const { email, password } = req.body;
     try {
       const user = await UserModel.findOne({ email });
-      if (!user) return res.status(400).json({ msg: 'USER_NOT_EXIST' });
+      if (!user) return res.status(400).json({ errors: [{ msg: 'USER_NOT_EXIST' }] });
 
       const isMatch = await bcrypt.compare(password, user.password);
-      if (!isMatch) res.status(400).json({ msg: 'INCORRECT_PASSWORD' });
+      if (!isMatch) res.status(400).json({ errors: [{ msg: 'INCORRECT_PASSWORD' }] });
 
       const { id } = user;
       const payload = {
@@ -56,7 +56,7 @@ function userController(UserModel: any) {
           res.status(200).json({ token });
         });
     } catch (error) {
-      res.status(500).json({ msg: 'INTERNAL_SERVER_ERROR' });
+      res.status(500).json({ errors: [{ msg: 'INTERNAL_SERVER_ERROR' }] });
     }
     return true;
   };
@@ -67,7 +67,7 @@ function userController(UserModel: any) {
       const user = await UserModel.findById(query);
       res.json(user);
     } catch (error) {
-      res.send({ msg: 'ERROR_FETCHING_USER' });
+      res.json({ errors: [{ msg: 'ERROR_FETCHING_USER' }] });
     }
   };
 
