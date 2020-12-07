@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router'
 import { DetailProductComponent } from './components/detail-product/detail-product.component'
 import { LoginComponent } from './login/login.component'
 import { RegisterComponent } from './register/register.component'
+import { ProfileComponent } from './profile/profile.component'
 
 const routes: Routes = [
   { path: 'detail/:id', component: DetailProductComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent, pathMatch: 'full' }
+  { path: 'register', component: RegisterComponent, pathMatch: 'full' },
+  { path: 'profile', component: ProfileComponent, pathMatch: 'full' }
 ]
 
 @NgModule({
