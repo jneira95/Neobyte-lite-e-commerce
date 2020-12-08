@@ -7,9 +7,14 @@ import { UserLoginStateService } from '../../services/user-login-state.service'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  public flag: boolean;
+
   constructor (private userLoginState: UserLoginStateService) {}
-  logged: boolean
+
   ngOnInit (): void {
-    this.userLoginState.getUser() !== null ? this.logged = true : this.logged = false
+    this.userLoginState.getUser() !== null ? this.userLoginState.setValue(true) : this.userLoginState.setValue(false)
+    this.userLoginState.getValue().subscribe((value) => {
+      this.flag = value
+    })
   }
 }
