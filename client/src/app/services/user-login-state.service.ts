@@ -1,18 +1,34 @@
 import { Injectable } from '@angular/core'
+import { BehaviorSubject, Observable } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserLoginStateService {
-  setUser (user: object): void {
-    localStorage.setItem('user', JSON.stringify(user))
-  }
+   private loggedStatus: BehaviorSubject<boolean>;
+   constructor () {
+     this.loggedStatus = new BehaviorSubject<boolean>(false)
+   }
 
-  getUser () {
-    return localStorage.getItem('user')
-  }
+   setUser (user: object): void {
+     localStorage.setItem('user', JSON.stringify(user))
+     this.loggedStatus.next(true)
+   }
 
-  removeUser (): void {
-    localStorage.removeItem('user')
-  }
+   getUser () {
+     return localStorage.getItem('user')
+   }
+
+   getValue (): Observable<boolean> {
+     return this.loggedStatus.asObservable()
+   }
+
+   removeUser (): void {
+     localStorage.removeItem('user')
+     this.loggedStatus.next(false)
+   }
+
+   setValue (currentStatus: boolean): void {
+     this.loggedStatus.next(currentStatus)
+   }
 }

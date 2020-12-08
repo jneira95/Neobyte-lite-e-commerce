@@ -47,7 +47,6 @@ export class AuthService {
     return this.http.post<any>(url, user).pipe(
       tap(token => this.validateToken(token)),
       catchError(async (error) => {
-        console.log(error)
         this.log(
           error.error.errors
             .map((error: any) => error.msg)
@@ -61,7 +60,6 @@ export class AuthService {
     return this.http.post<any>(url, user).pipe(
       tap(token => this.validateToken(token)),
       catchError(async (error) => {
-        console.log(error)
         this.log(
           error.error.errors
             .map((error: any) => error.msg)
