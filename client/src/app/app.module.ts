@@ -22,8 +22,8 @@ import { ProductFeaturePaymentsComponent } from './components/detail-product/pro
 import { ProductDescriptionComponent } from './components/detail-product/product-description/product-description.component'
 import { LoginComponent } from './login/login.component'
 import { RegisterComponent } from './register/register.component'
-import { ReactiveFormsModule } from '@angular/forms';
-import { ProfileComponent } from './profile/profile.component';
+import { ReactiveFormsModule } from '@angular/forms'
+import { ProfileComponent } from './profile/profile.component'
 import { ProfileSidebarComponent } from './components/header/profile-sidebar/profile-sidebar.component'
 
 @NgModule({
