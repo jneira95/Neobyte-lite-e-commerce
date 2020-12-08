@@ -1,7 +1,8 @@
-import { Component } from '@angular/core'
-import { FormControl, FormGroup } from '@angular/forms'
+import { Component, OnInit } from '@angular/core'
+import { Validators, FormBuilder } from '@angular/forms'
 import { AuthService } from '../services/auth-service.service'
 import { MessageService } from '../services/error-message.service'
+import { UserLoginStateService } from '../services/user-login-state.service'
 
 @Component({
   selector: 'app-login',
@@ -9,26 +10,20 @@ import { MessageService } from '../services/error-message.service'
   styleUrls: ['./login.component.scss']
 })
 
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   constructor (
     private authService: AuthService,
-    public messageService: MessageService
+    public messageService: MessageService,
+    private formBuilder: FormBuilder,
+    private userLoginState: UserLoginStateService
   ) {}
 
-  pruebas: string[] = this.messageService.messages
+  errorMessage: string[] = this.messageService.messages
 
-  loginForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl('')
+  loginForm = this.formBuilder.group({
+    email: ['', Validators.required],
+    password: ['', Validators.required]
   })
-
-  signup () {
-    console.log('funciona signup')
-  }
-
-  login () {
-    console.log('funciona login')
-  }
 
   onSubmit () {
     this.authService.userLogin(this.loginForm.value).subscribe((event) => {
@@ -36,16 +31,8 @@ export class LoginComponent {
       console.log('----> login component')
     })
   }
+
+  ngOnInit (): void {
+
+  }
 }
-
-// login
-// NO_VALID_EMAIL
-// NO_VALID_PASSWORD_MIN_LENGTH_6
-
-// signup
-// NO_VALID_USERNAME
-// NO_VALID_EMAIL
-// NO_VALID_PASSWORD_MIN_LENGTH_6
-
-// token
-// AUTH_ERROR
