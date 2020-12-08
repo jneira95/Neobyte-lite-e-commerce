@@ -5,10 +5,14 @@ import { check, validationResult } from 'express-validator';
 
 const validators = {
   loginValidation: [
-    check('email', 'NO_VALID_EMAIL').isEmail(),
-    check('password', 'NO_VALID_PASSWORD_MIN_LENGTH_6').isLength({
-      min: 6,
-    }),
+    check('email')
+      .isEmail()
+      .withMessage('La dirección de correo electronico, no es correcta!'),
+    check('password')
+      .isLength({
+        min: 6,
+      })
+      .withMessage('La contraseña, no es valida! Minimo 6 caracteres'),
     (req: Request, res: Response, next: NextFunction) => {
       const errors = validationResult(req);
       if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });
@@ -16,14 +20,19 @@ const validators = {
     },
   ],
   signupValidation: [
-    check('username', 'NO_VALID_USERNAME')
+    check('username')
       .not()
-      .isEmpty(),
-    check('email', 'NO_VALID_EMAIL')
-      .isEmail(),
-    check('password', 'NO_VALID_PASSWORD_MIN_LENGTH_6').isLength({
-      min: 6,
-    }),
+      .trim()
+      .isEmpty()
+      .withMessage('El nombre de usuario no es valido!'),
+    check('email')
+      .isEmail()
+      .withMessage('La dirección de correo electronico, no es correcta!'),
+    check('password')
+      .isLength({
+        min: 6,
+      })
+      .withMessage('La contraseña, no es valida! Minimo 6 caracteres'),
     (req: Request, res: Response, next: NextFunction) => {
       const errors = validationResult(req);
       if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });

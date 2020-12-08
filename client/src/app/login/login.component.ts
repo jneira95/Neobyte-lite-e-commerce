@@ -3,6 +3,7 @@ import { Validators, FormBuilder } from '@angular/forms'
 import { AuthService } from '../services/auth-service.service'
 import { MessageService } from '../services/error-message.service'
 import { UserLoginStateService } from '../services/user-login-state.service'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-login',
@@ -11,24 +12,27 @@ import { UserLoginStateService } from '../services/user-login-state.service'
 })
 
 export class LoginComponent implements OnInit {
-  constructor (
-    private authService: AuthService,
-    public messageService: MessageService,
-    private formBuilder: FormBuilder,
-    private userLoginState: UserLoginStateService
-  ) {}
-
-  errorMessage: string[] = this.messageService.messages
+  public errorMessage: string[] = this.messageService.messages
 
   loginForm = this.formBuilder.group({
     email: ['', Validators.required],
     password: ['', Validators.required]
   })
 
+  constructor (
+    private authService: AuthService,
+    public messageService: MessageService,
+    private formBuilder: FormBuilder,
+    private userLoginState: UserLoginStateService,
+    private route: Router
+  ) {}
+
   onSubmit () {
-    this.authService.userLogin(this.loginForm.value).subscribe((event) => {
+    this.authService.userLogin(this.loginForm.value).subscribe(() => {
       this.messageService.clear()
-      console.log('----> login component')
+    })
+    this.userLoginState.getValue().subscribe((value) => {
+      value ? this.route.navigate(['profile']) : this.route.navigate(['profile'])
     })
   }
 

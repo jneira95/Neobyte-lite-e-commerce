@@ -7,7 +7,7 @@ function userController(UserModel: any) {
     const { username, email, password } = req.body;
     try {
       const isUserRegistered = await UserModel.exists({ email });
-      if (isUserRegistered) return res.status(400).json({ errors: [{ msg: 'USER_ALREADY_EXIST' }] });
+      if (isUserRegistered) return res.status(400).json({ errors: [{ msg: 'La dirección de correo ya esta en uso!' }] });
 
       const user = new UserModel({
         username,
@@ -40,10 +40,10 @@ function userController(UserModel: any) {
     const { email, password } = req.body;
     try {
       const user = await UserModel.findOne({ email });
-      if (!user) return res.status(400).json({ errors: [{ msg: 'USER_NOT_EXIST' }] });
+      if (!user) return res.status(400).json({ errors: [{ msg: 'El usuario no existe!' }] });
 
       const isMatch = await bcrypt.compare(password, user.password);
-      if (!isMatch) res.status(400).json({ errors: [{ msg: 'INCORRECT_PASSWORD' }] });
+      if (!isMatch) res.status(400).json({ errors: [{ msg: 'Contraseña incorrecta!' }] });
 
       const { id } = user;
       const payload = {
