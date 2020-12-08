@@ -15,7 +15,7 @@ export class RegisterComponent {
     private formBuilder: FormBuilder
   ) {}
 
-   pruebas: string[] = this.messageService.messages
+   errorMessage: string[] = this.messageService.messages
 
     registerForm = this.formBuilder.group({
       username: ['', Validators.required],
@@ -26,7 +26,6 @@ export class RegisterComponent {
     onSubmit () {
       this.authService.userRegister(this.registerForm.value).subscribe((event) => {
         this.messageService.clear()
-        console.log('----> login component')
       })
     }
 }
