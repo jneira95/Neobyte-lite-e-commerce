@@ -15,18 +15,18 @@ export class ImagesGalleryComponent implements OnInit {
 
   currentLargeImg: number
 
-  imageSlider (navigation: string): void {
+  imageSlider (navigation: string): boolean {
     switch (navigation) {
       case 'prev':
-        if (this.currentLargeImg === 0) return
+        if (this.currentLargeImg === 0) return false
         this.currentLargeImg -= 1
         break
       case 'next':
-        if (this.currentLargeImg === this.images.length - 1) return
+        if (this.currentLargeImg === this.images.length - 1) return false
         this.currentLargeImg += 1
         break
       default:
-        break
+        return true
     }
   }
 }
