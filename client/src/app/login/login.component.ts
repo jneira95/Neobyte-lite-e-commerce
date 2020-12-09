@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       this.messageService.clear()
     })
     this.userLoginState.getValue().subscribe((value) => {
-      value ? this.route.navigate(['profile']) : this.route.navigate(['profile'])
+      value ? this.route.navigate(['profile']) : this.route.navigate(['login'])
     })
   }
 
