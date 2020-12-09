@@ -1,8 +1,9 @@
-import { Component } from '@angular/core'
-import { FormControl, FormGroup } from '@angular/forms'
+import { Component, OnInit } from '@angular/core'
+import { Validators, FormBuilder } from '@angular/forms'
 import { AuthService } from '../services/auth-service.service'
-// import { ILogin } from '../store/models/user.model'
-// import { Observable } from 'rxjs'
+import { MessageService } from '../services/error-message.service'
+import { UserLoginStateService } from '../services/user-login-state.service'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-login',
@@ -10,23 +11,32 @@ import { AuthService } from '../services/auth-service.service'
   styleUrls: ['./login.component.scss']
 })
 
-export class LoginComponent {
-  constructor (private authService: AuthService) {}
+export class LoginComponent implements OnInit {
+  public errorMessage: string[] = this.messageService.messages
 
-  loginForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl('')
+  loginForm = this.formBuilder.group({
+    email: ['', Validators.required],
+    password: ['', Validators.required]
   })
 
-  signup () {
-    console.log('funciona signup')
-  }
-
-  login () {
-    console.log('funciona login')
-  }
+  constructor (
+    private authService: AuthService,
+    public messageService: MessageService,
+    private formBuilder: FormBuilder,
+    private userLoginState: UserLoginStateService,
+    private route: Router
+  ) {}
 
   onSubmit () {
-    this.authService.userLogin(this.loginForm.value)
+    this.authService.userLogin(this.loginForm.value).subscribe(() => {
+      this.messageService.clear()
+    })
+    this.userLoginState.getValue().subscribe((value) => {
+      value ? this.route.navigate(['profile']) : this.route.navigate(['profile'])
+    })
+  }
+
+  ngOnInit (): void {
+
   }
 }

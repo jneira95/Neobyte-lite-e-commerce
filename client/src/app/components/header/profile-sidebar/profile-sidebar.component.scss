@@ -1,0 +1,35 @@
+.side-navbar-container {
+  transform: translateX(350px);
+  overflow-y: scroll;
+  // background: rgba(0, 0, 0, 0.95);
+  background: rgba(255, 255, 255, 0.95);
+  transition: ease-out .3s;
+  position: absolute;
+  position: fixed;
+  height: 100vh;
+  width: 350px;
+  z-index: 1000;
+  right: 0;
+  top: 0;
+  .sidebar-close-wrapper {
+    display: flex;
+    padding: 20px;
+    .sidebar-close-btn {
+      .sidebar-close-icon {
+        transition: ease-in-out .1s;
+        font-size: 30px;
+        color: rgb(230, 230, 230);
+        cursor: pointer;
+      }
+      .sidebar-close-icon:hover {
+        transform: scale(1.4);
+      }
+    }
+  }
+  .sidebar-navigation {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}

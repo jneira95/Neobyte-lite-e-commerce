@@ -23,6 +23,8 @@ import { ProductDescriptionComponent } from './components/detail-product/product
 import { LoginComponent } from './login/login.component'
 import { RegisterComponent } from './register/register.component'
 import { ReactiveFormsModule } from '@angular/forms'
+import { ProfileComponent } from './profile/profile.component'
+import { ProfileSidebarComponent } from './components/header/profile-sidebar/profile-sidebar.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { ReactiveFormsModule } from '@angular/forms'
     ProductFeaturePaymentsComponent,
     ProductDescriptionComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfileComponent,
+    ProfileSidebarComponent
   ],
   imports: [
     HttpClientModule,
