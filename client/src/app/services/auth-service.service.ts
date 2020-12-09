@@ -38,11 +38,11 @@ export class AuthService {
     return this.http.get<any>(url, { headers: { ...this.httpOptions, ...token } })
       .subscribe((user) => {
         this.userLoginState.setUser(user)
-        this.router.navigate(['/profile'])
+        this.router.navigate(['profile'])
       })
   }
 
-  userLogin (user: any): Observable<ILogin> {
+  userLogin (user: object): Observable<ILogin> {
     const url = `${this.authEnpoint}${this.login}`
     return this.http.post<any>(url, user).pipe(
       tap(token => this.validateToken(token)),
