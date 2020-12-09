@@ -1,25 +1,31 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ProfileSidebarComponent } from './profile-sidebar.component';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { ProfileSidebarComponent } from './profile-sidebar.component'
+import { RouterModule } from '@angular/router'
+import { RouterTestingModule } from '@angular/router/testing'
 
 describe('ProfileSidebarComponent', () => {
-  let component: ProfileSidebarComponent;
-  let fixture: ComponentFixture<ProfileSidebarComponent>;
+  let component: ProfileSidebarComponent
+  let fixture: ComponentFixture<ProfileSidebarComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfileSidebarComponent ]
+      imports: [RouterModule.forRoot([]), RouterTestingModule],
+      declarations: [ProfileSidebarComponent]
     })
-    .compileComponents();
-  });
+      .compileComponents()
+  })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProfileSidebarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(ProfileSidebarComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+  it('should open and close sidebar', () => {
+    component.openProfileSidebar()
+    component.closeProfileSidebar()
+  })
+})

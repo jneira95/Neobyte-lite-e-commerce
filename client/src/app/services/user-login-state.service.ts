@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core'
+import { Router } from '@angular/router'
 import { BehaviorSubject, Observable } from 'rxjs'
 
 @Injectable({
@@ -6,7 +7,9 @@ import { BehaviorSubject, Observable } from 'rxjs'
 })
 export class UserLoginStateService {
    private loggedStatus: BehaviorSubject<boolean>;
-   constructor () {
+   constructor (
+     private router: Router
+   ) {
      this.loggedStatus = new BehaviorSubject<boolean>(false)
    }
 
@@ -26,6 +29,7 @@ export class UserLoginStateService {
    removeUser (): void {
      localStorage.removeItem('user')
      this.loggedStatus.next(false)
+     this.router.navigate(['login'])
    }
 
    setValue (currentStatus: boolean): void {

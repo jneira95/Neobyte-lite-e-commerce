@@ -6,7 +6,7 @@ import { UserLoginStateService } from './services/user-login-state.service'
 @Injectable({
   providedIn: 'root'
 })
-export class LoginAccessGuard implements CanActivate {
+export class AuthGuard implements CanActivate {
  private flag: boolean
 
  constructor (
@@ -21,10 +21,10 @@ export class LoginAccessGuard implements CanActivate {
      this.flag = value
    })
    if (this.flag) {
-     this.router.navigate(['profile'])
-     return false
-   } else {
      return true
+   } else {
+     this.router.navigate(['login'])
+     return false
    }
  }
 }
