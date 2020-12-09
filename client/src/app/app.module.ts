@@ -25,6 +25,8 @@ import { RegisterComponent } from './register/register.component'
 import { ReactiveFormsModule } from '@angular/forms'
 import { ProfileComponent } from './profile/profile.component'
 import { ProfileSidebarComponent } from './components/header/profile-sidebar/profile-sidebar.component'
+import { LoginAccessGuard } from './login-access.guard'
+import { AuthGuard } from './auth-access.guard'
 
 @NgModule({
   declarations: [
@@ -57,7 +59,7 @@ import { ProfileSidebarComponent } from './components/header/profile-sidebar/pro
     MatIconModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [LoginAccessGuard, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
