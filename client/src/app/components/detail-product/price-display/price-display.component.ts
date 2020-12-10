@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core'
 })
 export class PriceDisplayComponent {
   @Input() price: number
-  @Input() discount: number
+  @Input() sales: number
 }
