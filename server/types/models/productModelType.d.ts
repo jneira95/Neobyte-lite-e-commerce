@@ -6,13 +6,16 @@ interface ProductModel {
   'part-number'?: string;
   ean?: number;
   price: number;
+  sales: number;
   stock: number;
-  brand?: string;
-  'product-status'?: boolean;
+  'product-status': boolean;
+  category: string;
+  'sub-category': string;
+  manufacture: string;
   images?: Array<string>;
   'general-specs'?: Array<string>;
   shortDescription?: string;
-  generalDescription?: Array;
+  generalDescription?: Array<object>;
 }
 
 interface IProduct extends ProductModel, Document {}
