@@ -27,6 +27,8 @@ import { ProfileComponent } from './profile/profile.component'
 import { ProfileSidebarComponent } from './components/header/profile-sidebar/profile-sidebar.component'
 import { LoginAccessGuard } from './login-access.guard'
 import { AuthGuard } from './auth-access.guard'
+import { ListProductsComponent } from './components/list-products/list-products.component'
+import { HomeComponent } from './components/home/home.component'
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { AuthGuard } from './auth-access.guard'
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    ProfileSidebarComponent
+    ProfileSidebarComponent,
+    ListProductsComponent,
+    HomeComponent
   ],
   imports: [
     HttpClientModule,
