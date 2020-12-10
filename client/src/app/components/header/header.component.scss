@@ -14,8 +14,9 @@
     justify-content: space-between;
     .navbar-left-side {
       display: contents;
-      .navbar-logo-container > img {
-      width: 170px;
+      .navbar-logo-container > a >  img {
+      width: 150px;
+      max-height: 50px;
       cursor: pointer;
 
       }
