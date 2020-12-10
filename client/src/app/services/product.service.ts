@@ -18,4 +18,14 @@ export class ProductService {
     const url = `${this.mainEndpoint}${this.productEndpoint}/${id}`
     return this.http.get<IProductItem>(url)
   }
+
+  getProductList (): Observable<IProductItem> {
+    const url = `${this.mainEndpoint}${this.productEndpoint}`
+    return this.http.get<IProductItem>(url)
+  }
+
+  getProductListFilter (category: string, subCategory: string): Observable<IProductItem> {
+    const url = `${this.mainEndpoint}${this.productEndpoint}/?category=${category}&sub-category=${subCategory}`
+    return this.http.get<IProductItem>(url)
+  }
 }
