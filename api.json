@@ -1,150 +1,970 @@
 [
-  {
-    "name": "Asus GX550LXS-HF073T - Portátil 15 i7-10875H 32GB RTX 2080 SUPER 1TB",
-    "reference": " GX550LXS-HF073T",
-    "part-number": "90NR02Z1-M02620",
-    "ean": "999999999",
-    "price": "3489",
-    "stock": "10",
-    "product-status": true,
-    "images": [
-      "https://www.neobyte.es/37175-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
-      "https://www.neobyte.es/37176-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
-      "https://www.neobyte.es/37177-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
-      "https://www.neobyte.es/37178-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
-      "https://www.neobyte.es/37179-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg"
-    ],
-    "general-specs": [
-      "Intel Core i7-10875H",
-      "ScreenPad Plus: 14.1 4K Multitáctil",
-      "Memoria RAM: 32GB / 1TB SSD",
-      "NVIDIA RTX 2080 SUPER"
-    ],
-    "shortDescription": "Con el Asus GX550LXS-HF073T Zephyrus Duo 15 supera todos los límites, tanto para trabajar como para jugar. Un innovador portátil con ROG ScreenPad Plus, una pantalla secundaria inclinada 13º facilita la multitarea y cuenta con aplicaciones desarrolladas para optimizar tu flujo de trabajo. En el apartado de rendimiento, el Asus GX550LXS-HF073T Zephyrus Duo 15 va con todo. Equipado con procesador Intel Core i7 de 10ª generación, gráfica Nvidia RTX 2080 Super y 32GB de RAM, este modelo se atreve con las tareas más exigentes, desde proyectos creativos a streamings a velocidades increíbles. Y es que los desafíos no son problema para él. Gracias a su sistema de refrigeración es posible optimizar el flujo de aire y la disipación de forma automática, evitando que las altas temperaturas incidan en el funcionamiento del equipo. Descubre las infinitas posibilidades de este portátil en Neobyte.",
-    "generalDescription": [
-      {
-        "description": {
-          "name": "Características",
-          "content": [
-            "Procesador: Intel Core i7-10875H (8 Núcleos, 16 Subprocesos, Caché: 16MB SmartCache, hasta 5.10GHz, 64-bit)",
-            "Pantalla 15.6 (39,62cm) / LED Retroiluminado / FHD (1920x1080/16:9) / 300Hz / 300nits / 3ms / Antirreflejos / NTSC 72% / SRGB 100% / Adobe 75,35% / Contraste 1000:1 / IPS / Ángulo de Visión de 85°/85°/85°/85°",
-            "ROG ScreenPad™ Plus:14.1 (35,81cm) LED Retroiluminado / 60Hz / NanoEdge (Borde Estrecho) / 4K UHD (3840X1100/32:9) / Multitáctil",
-            "Memoria RAM: 32GB (16GB + 16GB [EN PLACA]) DDR4 3200MHz",
-            "Almacenamiento: 1TB SSD M.2 NVMe™ PCIe® 3.0 Performance",
-            "Tarjeta gráfica: NVIDIA GeForce RTX 2080 SUPER 8GB GDDR6 con Diseño Max-Q",
-            "Altavoces estéreo integrados: Sí, 2 x 4W",
-            "Micrófono integrado: Sí",
-            "Batería: 90Wh, 4 Celdas, Polímeros de Litio"
-          ]
-        }
-      },
-      {
-        "description": {
-          "name": "Sistema Operativo",
-          "content": ["Windows® 10 Home (64Bits)"]
-        }
-      },
-      {
-        "description": {
-          "name": "Conectividad y redes",
-          "content": [
-            "2 x USB 3.2 Gen1",
-            "1 x USB 3.2 Gen2",
-            "1 x Thunderbolt™ 3 USB-C (USB-C 3.2 Gen2/DisplayPort™ 1.4/Entrega de Alimentación/G-Sync)",
-            "1 x Conector de Audio Combinado Auriculares/Micrófono 3,5mm",
-            "1 x Entrada Micrófono 3,5mm",
-            "1 x Conector RJ45 LAN",
-            "1 x HDMI 2.0b",
-            "1 x Entrada de Corriente",
-            "Intel Wi-Fi 6 (Gig+)(802.11ax) 2x2 RangeBoost",
-            "Bluetooth 5.0 (La Versión puede cambiar en función de las actualizaciones del SO)"
-          ]
-        }
-      },
-      {
-        "description": {
-          "name": "Dimensiones",
-          "content": ["360 x 268 x 20,9 mm"]
-        }
-      },
-      {
-        "description": {
-          "name": "Peso",
-          "content": ["2,48 Kg (con batería de 4 celdas)"]
-        }
-      }
-    ]
-  },
-  {
-    "name": "Asus G512LW-HN038 - Portátil 15 i7-10750H 16GB RTX2070 512SSD",
-    "reference": "G512LW-HN038",
-    "part-number": "90NR0391-M00950",
-    "ean": "999999999",
-    "price": "1629",
-    "stock": "10",
-    "product-status": true,
-    "images": [
-      "https://www.neobyte.es/32697-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
-      "https://www.neobyte.es/32698-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
-      "https://www.neobyte.es/32693-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
-      "https://www.neobyte.es/32694-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
-      "https://www.neobyte.es/32695-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg"
-    ],
-    "general-specs": [
-      "Intel Core i7-10750H",
-      "16GB RAM / 512GB SSD",
-      "Nvidia GeForce RTX 2070 8GB GDDR6",
-      "15.6 Full HD IPS 144Hz"
-    ],
-    "shortDescription": "El Asus G512LW-HN038 ROG Strix G15 está preparado para todo lo que imaginas y más. ¡Puede ser tuyo en Neobyte con las máximas garantías y al precio más competitivo! Con un diseño deslumbrante y de vanguardia, este portátil de 15.6 se atreve con todo tipo de juegos y programas, incluso los más exigentes. Para ello, Asus lo ha equipado con un procesador Intel Core i7-10750H de 10ª generación y 6 núcleos, 16GB de RAM, SSD de 512GB y gráfica Nvidia GeForce RTX 2070 8GB GDDR6, garantía de potencia e innovación. Así mismo, señalar que el Asus G512LW-HN038 ROG Strix G15 ha sido provisto de una espectacular pantalla Full HD IPS que alcanza una tasa de refresco de 144Hz, lo que se traduce en una calidad de imagen y fluidez impresionantes.",
-    "generalDescription": [
-      {
-        "description": {
-          "name": "Características",
-          "content": [
-            "Procesador Intel® Core™ i7-10750H (6 Núcleos, 12 Subprocesos, Caché: 12MB SmartCache, 2.60GHz hasta 5.00GHz, 64-bit)",
-            "Memoria RAM 16GB (8GB + 8GB) DDR4 2933MHz",
-            "Gráfica NVIDIA® GeForce® RTX™ 2070 8GB GDDR6",
-            "Almacenamiento: 512GB SSD M.2 PCIe® 3.0 NVMe",
-            "Pantalla: 15.6 (39,62cm) / FHD (1920x1080) / LED Retroiluminado / 144Hz / 250 nits / Antirreflejos / NTSC 45% / sRGB 67% / Adobe 50% / 1000:1 / IPS-level",
-            "Bateria: 66Wh, 4 Celdas, Polímero de Lítio",
-            "Audio: 2 Altavoces Estéreo de 4.2W Integrados Micrófono de Matriz Intregado Tecnología Smart Amp"
-          ]
-        }
-      },
-      {
-        "description": {
-          "name": "Sistema Operativo",
-          "content": ["FreeDos (Sin Sistema)"]
-        }
-      },
-      {
-        "description": {
-          "name": "Conectividad y redes",
-          "content": [
-            " 3 x USB 3.2 (GEN1)",
-            "1 x USB-C 3.2 (GEN2) / DisplayPort / G-Sync",
-            "1 x Salida Auriculares/Entrada Micrófono 3.5mm (combo)",
-            "1 x Conector RJ45",
-            "1 x HDMI 2.0b",
-            "1 x Entrada de Corriente",
-            "Wi-Fi 6 (Gig+) (802.11ax) 2x2 RangeBoost",
-            "Bluetooth® 5.0"
-          ]
-        }
-      },
-      {
-        "description": {
-          "name": "Dimensiones",
-          "content": ["360 x 275 x 25.8 mm"]
-        }
-      },
-      {
-        "description": {
-          "name": "Peso",
-          "content": ["2.39 Kg (con batería de 8 celdas)"]
-        }
-      }
-    ]
-  }
+   {
+      "name":"Asus GX550LXS-HF073T - Portátil 15 i7-10875H 32GB RTX 2080 SUPER 1TB",
+      "reference":" GX550LXS-HF073T",
+      "part-number":"90NR02Z1-M02620",
+      "ean":"999999999",
+      "price":"3489",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/37175-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+         "https://www.neobyte.es/37176-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+         "https://www.neobyte.es/37177-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+         "https://www.neobyte.es/37178-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+         "https://www.neobyte.es/37179-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10875H",
+         "ScreenPad Plus: 14.1 4K Multitáctil",
+         "Memoria RAM: 32GB / 1TB SSD",
+         "NVIDIA RTX 2080 SUPER"
+      ],
+      "shortDescription":"Con el Asus GX550LXS-HF073T Zephyrus Duo 15 supera todos los límites, tanto para trabajar como para jugar. Un innovador portátil con ROG ScreenPad Plus, una pantalla secundaria inclinada 13º facilita la multitarea y cuenta con aplicaciones desarrolladas para optimizar tu flujo de trabajo. En el apartado de rendimiento, el Asus GX550LXS-HF073T Zephyrus Duo 15 va con todo. Equipado con procesador Intel Core i7 de 10ª generación, gráfica Nvidia RTX 2080 Super y 32GB de RAM, este modelo se atreve con las tareas más exigentes, desde proyectos creativos a streamings a velocidades increíbles. Y es que los desafíos no son problema para él. Gracias a su sistema de refrigeración es posible optimizar el flujo de aire y la disipación de forma automática, evitando que las altas temperaturas incidan en el funcionamiento del equipo. Descubre las infinitas posibilidades de este portátil en Neobyte.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel Core i7-10875H (8 Núcleos, 16 Subprocesos, Caché: 16MB SmartCache, hasta 5.10GHz, 64-bit)",
+                  "Pantalla 15.6 (39,62cm) / LED Retroiluminado / FHD (1920x1080/16:9) / 300Hz / 300nits / 3ms / Antirreflejos / NTSC 72% / SRGB 100% / Adobe 75,35% / Contraste 1000:1 / IPS / Ángulo de Visión de 85°/85°/85°/85°",
+                  "ROG ScreenPad™ Plus:14.1 (35,81cm) LED Retroiluminado / 60Hz / NanoEdge (Borde Estrecho) / 4K UHD (3840X1100/32:9) / Multitáctil",
+                  "Memoria RAM: 32GB (16GB + 16GB [EN PLACA]) DDR4 3200MHz",
+                  "Almacenamiento: 1TB SSD M.2 NVMe™ PCIe® 3.0 Performance",
+                  "Tarjeta gráfica: NVIDIA GeForce RTX 2080 SUPER 8GB GDDR6 con Diseño Max-Q",
+                  "Altavoces estéreo integrados: Sí, 2 x 4W",
+                  "Micrófono integrado: Sí",
+                  "Batería: 90Wh, 4 Celdas, Polímeros de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema Operativo",
+               "content":[
+                  "Windows® 10 Home (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "2 x USB 3.2 Gen1",
+                  "1 x USB 3.2 Gen2",
+                  "1 x Thunderbolt™ 3 USB-C (USB-C 3.2 Gen2/DisplayPort™ 1.4/Entrega de Alimentación/G-Sync)",
+                  "1 x Conector de Audio Combinado Auriculares/Micrófono 3,5mm",
+                  "1 x Entrada Micrófono 3,5mm",
+                  "1 x Conector RJ45 LAN",
+                  "1 x HDMI 2.0b",
+                  "1 x Entrada de Corriente",
+                  "Intel Wi-Fi 6 (Gig+)(802.11ax) 2x2 RangeBoost",
+                  "Bluetooth 5.0 (La Versión puede cambiar en función de las actualizaciones del SO)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "360 x 268 x 20,9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2,48 Kg (con batería de 4 celdas)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus G512LW-HN038 - Portátil 15 i7-10750H 16GB RTX2070 512SSD",
+      "reference":"G512LW-HN038",
+      "part-number":"90NR0391-M00950",
+      "ean":"999999999",
+      "price":"1629",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/32697-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+         "https://www.neobyte.es/32698-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+         "https://www.neobyte.es/32693-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+         "https://www.neobyte.es/32694-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+         "https://www.neobyte.es/32695-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10750H",
+         "16GB RAM / 512GB SSD",
+         "Nvidia GeForce RTX 2070 8GB GDDR6",
+         "15.6 Full HD IPS 144Hz"
+      ],
+      "shortDescription":"El Asus G512LW-HN038 ROG Strix G15 está preparado para todo lo que imaginas y más. ¡Puede ser tuyo en Neobyte con las máximas garantías y al precio más competitivo! Con un diseño deslumbrante y de vanguardia, este portátil de 15.6 se atreve con todo tipo de juegos y programas, incluso los más exigentes. Para ello, Asus lo ha equipado con un procesador Intel Core i7-10750H de 10ª generación y 6 núcleos, 16GB de RAM, SSD de 512GB y gráfica Nvidia GeForce RTX 2070 8GB GDDR6, garantía de potencia e innovación. Así mismo, señalar que el Asus G512LW-HN038 ROG Strix G15 ha sido provisto de una espectacular pantalla Full HD IPS que alcanza una tasa de refresco de 144Hz, lo que se traduce en una calidad de imagen y fluidez impresionantes.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador Intel® Core™ i7-10750H (6 Núcleos, 12 Subprocesos, Caché: 12MB SmartCache, 2.60GHz hasta 5.00GHz, 64-bit)",
+                  "Memoria RAM 16GB (8GB + 8GB) DDR4 2933MHz",
+                  "Gráfica NVIDIA® GeForce® RTX™ 2070 8GB GDDR6",
+                  "Almacenamiento: 512GB SSD M.2 PCIe® 3.0 NVMe",
+                  "Pantalla: 15.6 (39,62cm) / FHD (1920x1080) / LED Retroiluminado / 144Hz / 250 nits / Antirreflejos / NTSC 45% / sRGB 67% / Adobe 50% / 1000:1 / IPS-level",
+                  "Bateria: 66Wh, 4 Celdas, Polímero de Lítio",
+                  "Audio: 2 Altavoces Estéreo de 4.2W Integrados Micrófono de Matriz Intregado Tecnología Smart Amp"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema Operativo",
+               "content":[
+                  "FreeDos (Sin Sistema)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  " 3 x USB 3.2 (GEN1)",
+                  "1 x USB-C 3.2 (GEN2) / DisplayPort / G-Sync",
+                  "1 x Salida Auriculares/Entrada Micrófono 3.5mm (combo)",
+                  "1 x Conector RJ45",
+                  "1 x HDMI 2.0b",
+                  "1 x Entrada de Corriente",
+                  "Wi-Fi 6 (Gig+) (802.11ax) 2x2 RangeBoost",
+                  "Bluetooth® 5.0"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "360 x 275 x 25.8 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2.39 Kg (con batería de 8 celdas)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus BX425JA-BM145R - Portátil 14 i7-1065G7 16GB 512GB W10Pro",
+      "reference":"BX425JA-BM145R",
+      "part-number":"90NB0QX1-M02720",
+      "ean":"999999999",
+      "price":"1229",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"workstation",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/38232-thickbox_default/portatil-asus-15-bx425ja-bm145r-i7-1065g7-16gb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-1065G7",
+         "16GB RAM / 512GB SSD",
+         "14 Full HD IPS",
+         "Windows 10 Pro"
+      ],
+      "shortDescription":"Potente, bello y con Windows 10 Pro, el Asus BX425JA-BM145R ZenBook 14 es la herramienta de trabajo que estabas buscando. Fabricado con materiales de primera calidad y con un tamaño de tan solo 14, está preparado para acompañarte en el día a día e incrementar tu productividad allá donde estés. Entre sus especificaciones técnicas, destacar el procesador Intel Core i7-1065G7 de 10ª gen. con gráficos integrados Intel Iris Plus, los 16GB de memoria RAM y los 512GB de almacenamiento SSD. Estos componentes aseguran un encendido instantáneo y una capacidad multitarea espectacular. Así mismo, indicar que el Asus BX425JA-BM145R ZenBook 14 cuenta con pantalla Full HD IPS de borde estrecho, altavoces certificados por Harman Kardon y una completa conectividad.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador Intel® Core™ i7-1065G7 (4 Núcleos, 8 Subprocesos, Caché: 8MB SmartCache, 1.30GHz hasta 3.90GHz, 64-bit)",
+                  "Pantalla 14 (35,56cm) LED Retroiluminado / 60Hz / NanoEdge (Borde Estrecho) / 300nits / FHD (1920x1080/16:9) / Antirreflejos / NTSC:72% / sRGB: 100% / IPS / Ángulo de Visión de 178°",
+                  "Memoria RAM 16GB (16GB [EN PLACA]) LPDDR4X 3200MHz",
+                  "Gráfica Intel® Iris® Plus Graphics 640",
+                  "Almacenamiento: 512GB SSD M.2 NVMe™ PCIe® 3.0 x2 + TPM",
+                  "Webcam: Si, HD (720p) IR/RGB Combo",
+                  "NumberPad™ 2.0/Touchpad multitáctil",
+                  "Tecnología Precision Touchpad (PTP) compatible con gestos inteligentes de hasta cuatro dedos",
+                  "Teclado tipo chicle, retroiluminado, Español",
+                  "Batería: 67WHrs, 4 Celdas, Ion de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Pro (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "1 x USB 3.2 Gen1",
+                  "2 x Thunderbolt™ 3 USB-C® (DisplayPort™ 1.4/Entrega de Alimentación)",
+                  "1 x HDMI 2.0b",
+                  "1 x Lector de Tarjetas Micro SD",
+                  "10/100/1000 Mbps con adaptador externo USB 3.0 a RJ45",
+                  "Wi-Fi 6 (Gig+)(802.11ax) 2x2",
+                  "Bluetooth® 5.0"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "319 x 208 x 13,9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "1,2 Kg"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus B9450FA-BM0306R - Portátil 14 i7-10510U 16GB 1TB SSD W10Pro",
+      "reference":"B9450FA-BM0306R",
+      "part-number":"90NX02K1-M03440",
+      "ean":"999999999",
+      "price":"1659.99",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"workstation",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/26451-thickbox_default/portatil-asus-b9450fa-bm0306r-i7-10510u-16gb-1tb.jpg",
+         "https://www.neobyte.es/26444-thickbox_default/portatil-asus-b9450fa-bm0306r-i7-10510u-16gb-1tb.jpg",
+         "https://www.neobyte.es/26445-thickbox_default/portatil-asus-b9450fa-bm0306r-i7-10510u-16gb-1tb.jpg",
+         "https://www.neobyte.es/26446-thickbox_default/portatil-asus-b9450fa-bm0306r-i7-10510u-16gb-1tb.jpg",
+         "https://www.neobyte.es/26447-thickbox_default/portatil-asus-b9450fa-bm0306r-i7-10510u-16gb-1tb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10510U",
+         "RAM: 16GB / 1TB SSD",
+         "14 Full HD IPS NanoEdge",
+         "Windows 10 Pro"
+      ],
+      "shortDescription":"Elegante, minimalista y ultraligero, el Asus B9450FA-BM0306R ExpertBook es un portátil de 14 especialmente desarrollado para su uso en entornos empresariales, estableciendo un nuevo estándar en cuanto a portabilidad, resistencia, rendimiento e innovación. Provisto de procesador Intel Core i7-10510U de 10ª generación, 16GB de RAM y SSD de 1TB, ofrece una capacidad de respuesta impresionante a todos los niveles, permitiéndote acceder a tus programas y datos instantáneamente. En este sentido, señalar que el Asus B9450FA-BM0306R ExpertBook cuenta con Intel Project Athena, una certificación que acredita las prestaciones, eficiencia y conectividad más avanzadas. Construido conforme al estándar de durabilidad militar MIL-STD 810G, el Asus B9450FA-BM0306R ExpertBook es una apuesta segura para todos aquellos que priman la fiabilidad y la resistencia, algo fundamental para profesionales dinámicos que necesitan una herramienta de trabajo en la que confiar. Así mismo, destacar que este ultrabook equipa pantalla Full HD IPS de 14 con marco ultradelgado, así como el novedoso NumberPad, multitud de puertos y las soluciones más avanzadas de seguridad (bloqueo de cámara web, cámara IR, TPM, sensor de huella...). Eleva tu productividad con el Asus ExpertBook B9450FA-BM0306R.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel® Core™ i7-10510U (4 Núcleos, 8 hilos, Caché: 9MB, 1.80 hasta 4.90GHz)",
+                  "Memoria RAM: 16GB (en placa) LPDDR3 2133MHz",
+                  "Gráfica: Intel® UHD",
+                  "Almacenamiento: 1TB SSD M.2 PCIe® Gen3 x4 NVMe + TPM",
+                  "Unidad óptica: no",
+                  "Pantalla de 14 Full HD IPS, antirreflejos, sRGB: 100%, 1920 x 1080",
+                  "Webcam IR/RGB",
+                  "Sensor de huella",
+                  "NumberPad",
+                  "Teclado retroiluminado",
+                  "Audio: altavoces integrados Harman Kardon, micrófono de matriz 360º",
+                  "Batería de 2 celdas"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Pro (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "1 x USB 3.1 (GEN2)",
+                  "2 x USB-C 3.1 (GEN2) (Thunderbolt 3/DisplayPort/Power Delivery)",
+                  "1 x Salida Auriculares/Entrada Micrófono 3.5mm (combo)",
+                  "1 x Micro HDMI a RJ45 LAN",
+                  "1 x HDMI 1.4",
+                  "LAN (a través de micro HDMI)",
+                  "WiFi 6 802.11ax (2x2)",
+                  "Bluetooth 5.0"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "321 x 202 x 8-14.9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "995 gr."
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus BX325JA-EG081R - Portátil 13 i7-1065G7 16GB 512GB W10Pro",
+      "reference":"BX325JA-EG081R",
+      "part-number":"90NB0QY1-M01320",
+      "ean":"999999999",
+      "price":"1179.99",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"workstation",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/37004-thickbox_default/portatil-asus-bx325ja-eg081r-i7-1065g7-16gb-512gb.jpg",
+         "https://www.neobyte.es/37165-thickbox_default/portatil-asus-bx325ja-eg081r-i7-1065g7-16gb-512gb.jpg",
+         "https://www.neobyte.es/37166-thickbox_default/portatil-asus-bx325ja-eg081r-i7-1065g7-16gb-512gb.jpg",
+         "https://www.neobyte.es/37168-thickbox_default/portatil-asus-bx325ja-eg081r-i7-1065g7-16gb-512gb.jpg",
+         "https://www.neobyte.es/37169-thickbox_default/portatil-asus-bx325ja-eg081r-i7-1065g7-16gb-512gb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-1065G7",
+         "16GB RAM / 512GB SSD",
+         "13.3 Full HD IPS",
+         "Windows 10 Pro"
+      ],
+      "shortDescription":"Diseño exquisito y rendimiento profesional con el Asus BX325JA-EG081R ZenBook, un ultrabook fabricado con materiales premium y hardware de última generación que te permitirá elevar tu productividad. Su elegante, refinado y ligero chasis da cabida a un fabuloso teclado de tacto confortable, una magnífica pantalla Full HD IPS de 13.3, a diferentes puertos de alta velocidad y a unos poderosos altavoces certificados por Harman Kardon que te sorprenderán. En su interior encontramos unos componentes de primera que garantizan un comportamiento fluido y una capacidad multitarea espectacular. Entre ellos, destacan el procesador Intel Core i7-1065G7 con gráficos integrados Iris Plus, los 16GB de memoria RAM y el SSD M.2 MVMe de 512GB. Por último, indicar que el Asus BX325JA-EG081R ZenBook incluye Windows 10 Pro.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador Intel® Core™ i7-1065G7 (4 Núcleos, 8 Subprocesos, Caché: 8MB SmartCache, 1.30GHz hasta 3.90GHz, 64-bit)",
+                  "Memoria RAM 16GB (16GB [EN PLACA]) LPDDR4X 3200MHz",
+                  "Gráfica Intel® Iris® Plus Graphics",
+                  "Almacenamiento: 512GB SSD M.2 NVMe™ PCIe® 3.0 x2 + TPM",
+                  "Pantalla: 13.3 (33,78cm) LED Retroiluminado / 60Hz / NanoEdge (Borde Estrecho) / 300nits / FHD (1920x1080/16:9) / Antirreflejos / NTSC:72% / sRGB: 100% / IPS / Ángulo de Visión de 178°",
+                  "NumberPad™ 2.0/Touchpad multitáctil",
+                  "Bateria: 67Wh, 4 Celdas, Ion de Lítio",
+                  "Audio: Altavoces Estéreo Integrados con Tecnología Smart AMP, Micrófono de Matriz Integrado compatible con reconocimiento de voz de los asistentes Cortana y Alexa, Certificado por Harman/Kardon®"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Pro (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "1 x USB 3.2 (GEN1)",
+                  "2 x ThunderBolt 3 USB-C (DisplayPort/Alimentación)",
+                  "1 x HDMI 2.0b",
+                  "Lector de tarjetas MicroSD",
+                  "1 x Entrada de Corriente",
+                  "Wi-Fi 6 (Gig+) (802.11ax) 2x2",
+                  "Bluetooth® 5.0"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "304 x 203 x 13.9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "1.19 Kg"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus UX581LV-H2001R - Portátil 15.6 i7-10750H 16GB RTX 2060 1TB SSD",
+      "reference":"UX581LV-H2001R",
+      "part-number":"90NB0RQ1-M01390",
+      "ean":"999999999",
+      "price":"3149.99",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"workstation",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/39742-thickbox_default/portatil-asus-ux581lv-h2001r-i7-10750h-16gb-1tb.jpg",
+         "https://www.neobyte.es/39743-thickbox_default/portatil-asus-ux581lv-h2001r-i7-10750h-16gb-1tb.jpg",
+         "https://www.neobyte.es/39744-thickbox_default/portatil-asus-ux581lv-h2001r-i7-10750h-16gb-1tb.jpg",
+         "https://www.neobyte.es/39748-thickbox_default/portatil-asus-ux581lv-h2001r-i7-10750h-16gb-1tb.jpg",
+         "https://www.neobyte.es/39749-thickbox_default/portatil-asus-ux581lv-h2001r-i7-10750h-16gb-1tb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10750H",
+         "RAM 16GB / 1TB SSD",
+         "Pantalla IPS OLED 15.6 UHD",
+         "ScreenPad Plus 14",
+         "RTX 2060 6GB"
+      ],
+      "shortDescription":"El Asus UX581LV-H2001R Zenbook Pro Duo lleva tu productividad y creatividad al siguiente nivel. Este modelo propone una nueva forma de trabajar, maximizando el flujo de trabajo gracias a una pantalla táctil secundaria Asus ScreenPad Plus 4K que se integra a la perfección con la pantalla principal. En ella podrás hacer uso de diferentes herramientas, automatizar secuencias de teclas, utilizar la escritura manual, agrupar tareas… ¡posibilidades ilimitadas! Además, se trata de una máquina muy potente, dotada de procesador Intel Core i7-10750H, gráfica RTX 2060, 16GB de memoria y 1TB de almacenamiento SSD, lo que garantiza un rendimiento espectacular para llevar a cabo todo tipo de tareas. Descubre todas las prestaciones del Asus UX581LV-H2001R Zenbook Pro Duo en Neboyte.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Intel® Core™ i7-10750H (6 Núcleos, 12 Subprocesos, Caché: 12MB SmartCache, hasta 5.00GHz, 64-bit)",
+                  "Memoria RAM 16GB (16GB [EN PLACA]) DDR4 2933MHz (No ampliable)",
+                  "Gráfica NVIDIA® GeForce® RTX™ 2060 6GB DDR6 / Ansel / Compatible G-Sync / VR Ready",
+                  "Almacenamiento: 1TB SSD M.2 NVMe™ PCIe® 3.0 Performance",
+                  "Pantalla IPS OLED 15.6 (39,62cm) UHD (3840X2160) 16:9 / 60Hz / NanoEdge (Borde Estrecho) / 400nits / Brillante / DCI-P3: 100% / Multitáctil / IPS-level / Ángulo de Visión de 178° / PANTONE®            Validated",
+                  "Altavoces Estéreo Integrados con Sonido Envolvente",
+                  "Micrófono de Matriz Integrado compatible con reconocimiento de voz de los asistentes",
+                  "Cortana y Alexa",
+                  "Integrada Alexa con barra de luz",
+                  "Certificado por Harman/Kardon®",
+                  "Cámara: HD (720p) IR/RGB Combo",
+                  "Teclado tipo chicle, retroiluminado, Español",
+                  "NumberPad™/Touchpad multitáctil",
+                  "Tecnología Precision Touchpad (PTP) compatible con gestos inteligentes de hasta cuatro dedos",
+                  "Bateria: 71Wh, 8 Celdas, Ion de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"ScreenPad",
+               "content":[
+                  "ScreenPad™ Plus: 14 (35,56cm) / NanoEdge (Borde Estrecho) / 4K UHD (3840X1100/32:9) / Multitáctil / IPS / Ángulo de Visión de 178°"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Color",
+               "content":[
+                  "Tapa LCD: Aluminio, Azul Celeste",
+                  "Carcasa: Aluminio, Azul Celeste"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Pro (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "2 x USB 3.2 Gen2",
+                  "1 x Thunderbolt™ 3 USB-C (DisplayPort™ 1.4/Entrega de Alimentación)",
+                  "1 x Conector de Audio Combinado Auriculares/Micrófono 3,5mm",
+                  "1 x HDMI 2.0a",
+                  "1 x Entrada de Corriente",
+                  "Wi-Fi 6 (Gig+)(802.11ax) 2x2",
+                  "Bluetooth® 5.0 (La Versión puede cambiar con las actualizaciones del Sistema Operativo)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "356 x 225 x 23~24 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2,5 Kg (con batería de 8 celdas)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus W700G3T-AV093R - Portátil 17 i7-9750H 32GB RTX3000 1TB SSD",
+      "reference":"W700G3T-AV093R",
+      "part-number":"90NB0P02-M02750",
+      "ean":"999999999",
+      "price":"3219.99",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"workstation",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/36774-thickbox_default/portatil-asus-w700g3t-av093r-i7-9750h-32gb-1tb.jpg",
+         "https://www.neobyte.es/36775-thickbox_default/portatil-asus-w700g3t-av093r-i7-9750h-32gb-1tb.jpg",
+         "https://www.neobyte.es/36776-thickbox_default/portatil-asus-w700g3t-av093r-i7-9750h-32gb-1tb.jpg",
+         "https://www.neobyte.es/36777-thickbox_default/portatil-asus-w700g3t-av093r-i7-9750h-32gb-1tb.jpg",
+         "https://www.neobyte.es/36778-thickbox_default/portatil-asus-w700g3t-av093r-i7-9750h-32gb-1tb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-9750H",
+         "RAM: 32GB / 1TB SSD",
+         "Nvidia Quadro RTX 3000 6GB",
+         "Pantalla 17 WUXGA IPS"
+      ],
+      "shortDescription":"El Asus W700G3T-AV093R ProArt StudioBook Pro 17 te ofrece un rendimiento de primera clase y una capacidad de procesamiento descomunal para que lleves tu productividad a lo más alto estés donde estés. Equipado con procesador Intel Core i7-9750H de 6 núcleos, 32GB de memoria RAM y SSD M.2 NVMe de 1TB, permite realizar incluso las tareas más exigentes con una fluidez inigualable. Además, este modelo incorpora tarjeta gráfica Nvidia Quadro RTX 3000 de 6GB, capaz de renderizar tus archivo multicapas más rápido, optimizando así tu flujo de trabajo. Pero, además de por su hardware de vanguardia, el portátil workstation Asus W700G3T-AV093R ProArt StudioBook Pro 17 destaca por sus innovaciones. En este sentido, destascar el revolucionario touchpad con teclado numérico LED, la increíble pantalla NanoEdge de 17 y resolución WUXGA con validación Pantone, la refrigeración avanzada y su chasis ultrafino con certificado militar.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel Core i7-9750H (6 Núcleos, 12 Subprocesos, Caché: 12MB, 2.6 hasta 4.5GHz)",
+                  "Memoria RAM: 32GB DDR4 2666MHz (2 slots, ampliable hasta 64GB)",
+                  "Gráfica: Nvidia Quadro RTX 3000 6GB GDDR6",
+                  "Almacenamiento: 1TB SSD M.2 PCIe Gen3 x4 NVMe",
+                  "Unidad óptica: no",
+                  "Pantalla de 17 IPS WUXGA (1920x1200)",
+                  "Relación de aspecto: 16:10",
+                  "Webcam",
+                  "Sensor de huella dactilar: Sí",
+                  "Teclado: Tipo chicle retroiluminado,",
+                  "Audio: altavoces estéreo integrados, micrófono",
+                  "Batería de 3 celdas (57Wh)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Pro (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "3 x USB 3.2 (GEN2)",
+                  "1 x USB-C™ Thunderbolt™ 3 (DisplayPort™)",
+                  "1 x Salida Auriculares/Entrada Micrófono 3.5mm (combo)",
+                  "1 x HDMI",
+                  "1 x Lector de Tarjetas",
+                  "1 x Bloqueo de Seguridad Kensington",
+                  "1 x Entrada de Corriente",
+                  "WiFi 6 802.11ax (2x2)",
+                  "Bluetooth 5.0"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "382 x 286 x 18.4-19.9mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2.39 kg"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"MSI GS66 Stealth 10SE-051ES - Portátil 15 i7-10750 32GB RTX 2060 1TB SSD",
+      "reference":"GS66 Stealth 10SE-051ES",
+      "part-number":"9S7-16V112-051",
+      "ean":"999999999",
+      "price":"1899",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"msi",
+      "images":[
+         "https://www.neobyte.es/30420-thickbox_default/portatil-msi-gs66-10se-051es-i7-10750-32gb-1tb-ssd.jpg",
+         "https://www.neobyte.es/30421-thickbox_default/portatil-msi-gs66-10se-051es-i7-10750-32gb-1tb-ssd.jpg",
+         "https://www.neobyte.es/30422-thickbox_default/portatil-msi-gs66-10se-051es-i7-10750-32gb-1tb-ssd.jpg",
+         "https://www.neobyte.es/30423-thickbox_default/portatil-msi-gs66-10se-051es-i7-10750-32gb-1tb-ssd.jpg",
+         "https://www.neobyte.es/30424-thickbox_default/portatil-msi-gs66-10se-051es-i7-10750-32gb-1tb-ssd.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10750H ",
+         "RAM: 32GB / 1TB SSD",
+         "Nvidia GeForce RTX 2060 6GB GDDR6",
+         "Pantalla de 15.6 FHD 240Hz"
+      ],
+      "shortDescription":"Los gamers más exigentes encontrarán en el MSI GS66 Stealth 10SE-051ES el aliado perfecto para disfrutar de los últimos juegos del mercado a gran calidad y con una fluidez óptima. Este portátil gaming incorpora lo último en rendimiento, con procesador i7 de 10ª generación y gráfica RTX 2060 de Nvidia, una combinación letal para tus adversarios. Y es que jugar más rápido a más FPS te dará una ventaja competitiva en el campo de batalla. Cuenta, además, de memoria RAM de 32GB y pantalla Full HD a 240 Hz, con 1TB de almacenamiento SSD. Apuesta por el MSI GS66 Stealth 10SE-051ES y sumérgete de lleno en los eSports.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel Core i7-10750H (6 Núcleos, 12 Subprocesos, 2.6GHz hasta 5.0GHz)",
+                  "Memoria RAM: 32GB DDR4 2666MHz (2x16)",
+                  "Gráfica: Nvidia GeForce RTX 2060 6GB GDDR6",
+                  "Almacenamiento: 1TB NVMe PCIe Gen3x4 SSD",
+                  "Unidad óptica: no",
+                  "Pantalla de 15.6 FHD (1920 x 1080), 240Hz Thin Bezel, close to 100%sRGB",
+                  "Webcam",
+                  "Audio: altavoces integrados, micrófono",
+                  "Batería de 4 celdas"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows 10 Home"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "1 x USB 3.2 Gen2 Type-C (ThunderBolt 3)",
+                  "1 x USB 3.2 Gen2 Type-C",
+                  "3 x USB 3.2 Gen2 Type-A",
+                  "1 x RJ45",
+                  "1 x HDMI",
+                  "1 x Lector de tarjetas",
+                  "Killer WiFi 6 802.11ax AX1650",
+                  "Bluetooth 5.1"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "358.3 x 248 x 19.8 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2.1 kg."
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus FA506II-BQ029 - Portátil 15 Ryzen 7 4800H 16GB GTX1650Ti 1TB SSD",
+      "reference":"FA506II-BQ029",
+      "part-number":"90NR03M2-M05820",
+      "ean":"999999999",
+      "price":"1069",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/38220-thickbox_default/portatil-asus-15-fa506ii-bq029-r7-4800h-16gb-1tb.jpg",
+         "https://www.neobyte.es/38221-thickbox_default/portatil-asus-15-fa506ii-bq029-r7-4800h-16gb-1tb.jpg",
+         "https://www.neobyte.es/38222-thickbox_default/portatil-asus-15-fa506ii-bq029-r7-4800h-16gb-1tb.jpg",
+         "https://www.neobyte.es/38223-thickbox_default/portatil-asus-15-fa506ii-bq029-r7-4800h-16gb-1tb.jpg",
+         "https://www.neobyte.es/38224-thickbox_default/portatil-asus-15-fa506ii-bq029-r7-4800h-16gb-1tb.jpg"
+      ],
+      "general-specs":[
+         "AMD Ryzen 7 4800H",
+         "16GB RAM / 1TB SSD",
+         "Nvidia GeForce GTX 1650Ti 4GB",
+         "15.6 Full HD IPS"
+      ],
+      "shortDescription":"Con el Asus FA506II-BQ029 TUF Gaming A15 entrarás por la puerta grande en el universo de los portátiles gaming. Por menos de lo que imaginas podrás disfrutar del rendimiento increíble que arroja su procesador AMD Ryzen 7 4800H de 8 núcleos, acompañado por 16GB de RAM y 1TB SSD. Además, para una experiencia de juego fluida y detallada, este modelo cuenta con tarjeta gráfica Nvidia GeForce GTX 1650Ti de 4GB y pantalla Full HD IPS de 15.6. Paralelamente, indicar que el Asus FA506II-BQ029 TUF Gaming A15 ha sido fabricado con materiales de gran durabilidad y ha sido provisto de numerosos puertos que aseguran una conectividad sencilla con tus periféricos y dispositivos. ¡Consíguelo ya en Neobyte!",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador AMD® Ryzen™ 7 4800H APU (8 Núcleos, 16 Subprocesos, Caché: 12MB Level 2&3, 2.90GHz hasta 4.20GHz, 64-bit)",
+                  "Pantalla IPS 15.6 (39,62cm) FULL HD (1920x1080) 16:9 / LED Retroiluminado / 60Hz / 200nits / Antirreflejos / NTSC: 45%, sRGB: 62,50%, Adobe: 47,34% / Contraste: 700:1 / Ángulo de Visión de 170°/170°",
+                  "Memoria RAM 16GB (2x8GB) DDR4 3200MHz (ampliable a 32GB)",
+                  "Gráfica NVIDIA® GeForce® GTX 1650Ti 4GB GDDR6 VRAM",
+                  "Almacenamiento: 1TB SSD M.2 NVMe™ PCIe® 3.0",
+                  "Altavoces Estéreo Integrados",
+                  "Micrófono de Matriz Integrado compatible con reconocimiento de voz de los asistentes",
+                  "Cortana y Alexa",
+                  "Teclado tipo chicle, teclado numérico aislado, iluminación RGB, Español",
+                  "Touchpad multitáctil",
+                  "Tecnología Precision Touchpad (PTP) compatible con gestos inteligentes de hasta cuatro dedos",
+                  "Batería 48Wh, 3 Celdas, Polímeros de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "FreeDos (Sin Sistema)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "1 x USB 2.0",
+                  "2 x USB 3.2 Gen1",
+                  "1 x USB-C 3.2 Gen2 (DisplayPort™ 1.4)",
+                  "1 x Conector de Audio Combinado Auriculares/Micrófono 3,5mm",
+                  "1 x Conector RJ45 LAN",
+                  "1 x HDMI 2.0b",
+                  "1 x Bloqueo de Seguridad Kensington",
+                  "1 x Entrada de Corriente",
+                  "Wi-Fi 5 (802.11ac) 2x2",
+                  "Bluetooth® 5.0 (La Versión puede cambiar con las actualizaciones del Sistema Operativo)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "359 x 256 x 24,7~24,9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2,3 Kg (con batería de 3 celdas)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus GU502LW-HN071T - Portátil 15.6 i7-10750H 16GB RTX 2070 1TB SSD",
+      "reference":"GU502LW-HN071T",
+      "part-number":"90NR02W6-M02320",
+      "ean":"999999999",
+      "price":"2099",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/40198-thickbox_default/portatil-asus-15-gu502lw-hn071t-i7-10750h-16gb-1t.jpg",
+         "https://www.neobyte.es/40199-thickbox_default/portatil-asus-15-gu502lw-hn071t-i7-10750h-16gb-1t.jpg",
+         "https://www.neobyte.es/40200-thickbox_default/portatil-asus-15-gu502lw-hn071t-i7-10750h-16gb-1t.jpg",
+         "https://www.neobyte.es/40201-thickbox_default/portatil-asus-15-gu502lw-hn071t-i7-10750h-16gb-1t.jpg",
+         "https://www.neobyte.es/40202-thickbox_default/portatil-asus-15-gu502lw-hn071t-i7-10750h-16gb-1t.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10750H ",
+         "Pantalla IPS 15.6 FULL HD 144Hz ",
+         "RAM: 16GB / 1TB SSD",
+         "NVIDIA RTX 2070 8GB"
+      ],
+      "shortDescription":"En Neobyte podrás comprar el Asus GU502LW-HN071T ROG Zephyrus M15 a un precio muy competitivo y con todas las garantías. Este portátil gaming de 15.6 es sinónimo de rendimiento, incorporando tecnología de última generación para que disfrutes de la experiencia más fluida y potente. Su procesador de 6 núcleos (Intel Core i7-10750H) es un buen ejemplo de fiabilidad, proporcionando un funcionamiento rápido en todo tipo de tareas. Los gamers más exigentes sabrán apreciar la potencia de su gráfica RTX 2070, los 16GB de memoria y el estilo inconfundible de la Republic of Gamers. También ha sido provisto de SSD de 1TB de capacidad y de una pantalla Full HD a 144Hz en donde visualizar los contenidos con todo lujo de detalles. Descubre más del Asus GU502LW-HN071T ROG Zephyrus M15 y hazte con él nuestra tienda online.!",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel® Core™ i7-10750H (6 Núcleos, 12 Subprocesos, Caché: 12MB SmartCache, 2.60GHz hasta 5.00GHz, 64-bit)",
+                  "Pantalla IPS 15.6 (39,62cm) / LED Retroiluminado / FULL HD (1920x1080) 16:9 / 144Hz / 250nits / Antirreflejos / NTSC 45% / SRGB 62,50% / Adobe 47,10% / Contraste 1000:1 / Ángulo de Visión de 170°/170°",
+                  "Memoria RAM: 16GB (8GB + 8GB [EN PLACA]) DDR4 2933MHz (ampliable a 24GB / 1 slot)",
+                  "Almacenamiento: 1TB SSD M.2 NVMe™ PCIe® 3.0",
+                  "Tarjeta gráfica: NVIDIA GeForce® RTX™ 2070 8GB DDR6 / Diseño Max-Q / VR Ready",
+                  "2 Altavoces Estéreo Integrados con Tecnología Smart Amp",
+                  "Micrófono de Matriz de compatible con reconocimiento de voz de Cortana y Alexa",
+                  "Sonido Envolvente 7.1 Canales / Audio Hi-Res / SABRE HiFi / ESS",
+                  "Teclado: Tipo chicle, iluminación RGB por tecla, ROG Aura Sync, Español",
+                  "Touchpad: Multitáctil / Tecnología Precision Touchpad (PTP) compatible con gestos inteligentes de hasta cuatro dedos",
+                  "Batería: 76Wh, 4 Celdas, Polímero de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Color",
+               "content":[
+                  "Tapa LCD: Aluminio, Negro Prisma",
+                  "Carcasa: Aluminio, Negro"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Home (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "2 x USB 3.2 Gen1",
+                  "1 x USB 3.2 Gen2",
+                  "1 x Thunderbolt™ 3 USB-C® (USB-C® 3.2 Gen2/DisplayPort™ 1.4/Entrega de Alimentación)",
+                  "1 x Salida Auriculares 3.5mm (ESS Hi-Fi DAC)",
+                  "1 x Entrada Micrófono 3.5mm",
+                  "1 x Conector RJ45 LAN",
+                  "1 x HDMI 2.0b",
+                  "1 x Bloqueo de Seguridad Kensington",
+                  "1 x Entrada de Corriente",
+                  "Intel® Wi-Fi 6 (Gig+)(802.11ax) 2x2 RangeBoost",
+                  "Bluetooth® 5.0 (La Versión puede cambiar con las actualizaciones del Sistema Operativo)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "360 x 252 x 19,9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "1,9 Kg (con batería de 4 celdas)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus GX701LXS-HG032T - Portátil 17 i7-10875H 32GB RTX 2080 Super 1TB",
+      "reference":"GX701LXS-HG032T",
+      "part-number":"90NR03Q1-M01100",
+      "ean":"999999999",
+      "price":"3199",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/37171-thickbox_default/portatil-asus-17-s17-gx701lxs-hg032t-i7-10875h.jpg",
+         "https://www.neobyte.es/37170-thickbox_default/portatil-asus-17-s17-gx701lxs-hg032t-i7-10875h.jpg",
+         "https://www.neobyte.es/37172-thickbox_default/portatil-asus-17-s17-gx701lxs-hg032t-i7-10875h.jpg",
+         "https://www.neobyte.es/37173-thickbox_default/portatil-asus-17-s17-gx701lxs-hg032t-i7-10875h.jpg",
+         "https://www.neobyte.es/37174-thickbox_default/portatil-asus-17-s17-gx701lxs-hg032t-i7-10875h.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10875H ",
+         "Pantalla 17.3 FHD  / 300Hz ",
+         "RAM: 32GB / 1TB SSD",
+         "NVIDIA RTX 2080 SUPER"
+      ],
+      "shortDescription":"El Asus GX701LXS-HG032T ROG Zephyrus S17 desafía los límites de los portátiles. Este modelo de 17 pulgadas no ha escatimado a la hora de integrar un hardware potente que ofrezca la respuesta más rápida y fiable, maximizando la experiencia gaming en un equipo que podrás transportar fácilmente. Su pantalla Full HD a 300 Hz es toda una declaración de intenciones. Disfruta de imágenes detalladas y extremadamente fluidas para sumergirte de lleno en la acción de los juegos. Siguiendo con el listado de especificaciones, encontramos un procesador Intel Core i7 de 10ª generación, gráfica RTX 2080 Super y 32GB de memoria, una garantía de rendimiento capaz de hacer frente a todo tipo de tareas. Y para finalizar, un SSD de 1TB. El Asus GX701LXS-HG032T ROG Zephyrus S17 es una bestia dispuesta a todo. Hazte con él en Neobyte.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel Core i7-10875H (8 Núcleos, 16 Subprocesos, Caché: 16MB SmartCache, 2.30GHz hasta 5.10GHz, 64-bit)",
+                  "Pantalla 17.3 - 43,94cm / LED Retroiluminado / FHD (1920x1080/16:9) / 300Hz / 300nits / 3ms / Antirreflejos / NTSC 72% / SRGB 100% / Adobe 75% / Contraste 1000:1 / IPS / Ángulo de Visión de 178°/178°",
+                  "Memoria RAM: 32GB (16GB + 16GB [EN PLACA]) DDR4 3200MHz",
+                  "Almacenamiento: 1TB SSD M.2 PCIe® 3.0 x4 NVMe™",
+                  "Tarjeta gráfica: NVIDIA GeForce RTX 2080 SUPER 8GB GDDR6 con Diseño Max-Q",
+                  "Altavoces estéreo integrados: Sí, 2 x 2,5W",
+                  "Micrófono integrado: Sí, (compatible Cortana y Alexa)",
+                  "Batería: 76Wh, 4 Celdas, Polimero de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Home (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "2 x USB 3.2 (GEN1)",
+                  "1 x USB 3.2 (GEN2)",
+                  "1 x USB-C™ 3.2 (GEN2) (DisplayPort™ 1.4)",
+                  "1 x Thunderbolt™ 3 USB-C (USB-C™ 3.2 (GEN2)/DisplayPort™ 1.4/Entrega de Alimentación)",
+                  "1 x Salida Auriculares/Entrada Micrófono 3.5mm (combo)",
+                  "1 x HDMI 2.0b",
+                  "1 x Bloqueo de Seguridad Kensington",
+                  "1 x Entrada de Corriente",
+                  "Intel Wi-Fi 6 (Gig+)(802.11ax) 2x2 RangeBoost",
+                  "Bluetooth 5.0 (La Versión puede cambiar en función de las actualizaciones del SO)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "399 x 272 x 18,7 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2,6 Kg (con batería de 4 celdas)"
+               ]
+            }
+         }
+      ]
+   }
 ]
