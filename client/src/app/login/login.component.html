@@ -32,7 +32,7 @@
     </button>
   </form>
 
-  <div *ngIf="errorMessage.length !== 0" class="error-wrapper">
+  <div *ngIf="errorMessage" class="error-wrapper">
     <ul>
       <li *ngFor="let error of errorMessage" class="error-message">
         <p> {{ error }} </p>

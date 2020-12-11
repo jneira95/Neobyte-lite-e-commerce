@@ -4,11 +4,14 @@ export interface IProductItem {
   'part-number'?: string;
   ean?: number;
   price: number;
-  stock?: number;
-  brand?: string;
+  sales: number;
+  stock: number;
   'product-status': boolean;
-  images: Array<string>;
+  category: string;
+  'sub-category': string;
+  manufacture: string;
+  images?: Array<string>;
   'general-specs'?: Array<string>;
-  shortDescription: string;
-  generalDescription: Array<object>;
+  shortDescription?: string;
+  generalDescription?: Array<object>;
 }

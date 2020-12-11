@@ -5,8 +5,8 @@
       </span>
       <p class="current-price-vat">
         <span class="text-color">IVA incluido</span>
-        <span *ngIf="!discount" class="price-info-previous-discount">
-          {{ discount }}
+        <span *ngIf="sales" class="price-info-previous-discount">
+          {{ sales }}
         </span>
       </p>
     </section>

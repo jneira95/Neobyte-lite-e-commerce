@@ -11,20 +11,31 @@ export class SideNavbarComponent {
   categories: any[] = [
     {
       category: 'portátiles',
-      route: 'portatil',
+      route: 'laptop',
       icon: 'laptop_chromebook',
-      categoriesExpand: ['portatiles', 'gaming', 'workStation']
+      categoriesExpand: [
+        { name: 'portatiles', subRoute: '' },
+        { name: 'gaming', subRoute: 'gaming' },
+        { name: 'workstation', subRoute: 'workstation' }
+      ]
     },
     {
       category: 'periféricos',
-      route: 'perifericos',
+      route: 'peripheral',
       icon: 'mouse',
-      categoriesExpand: ['teclados', 'ratones', 'monitores']
+      categoriesExpand: [
+        { name: 'teclados', subRoute: 'keyboard' },
+        { name: 'ratones', subRoute: 'mouse' },
+        { name: 'monitores', subRoute: 'monitor' }
+      ]
     },
     {
       category: 'smartphones',
-      route: 'smartphones',
-      icon: 'smartphone'
+      route: 'smartphone',
+      icon: 'smartphone',
+      categoriesExpand: [
+        { name: 'smartphone', subRoute: 'smartphone' }
+      ]
     }
   ];
 

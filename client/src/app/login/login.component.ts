@@ -12,7 +12,7 @@ import { Router } from '@angular/router'
 })
 
 export class LoginComponent implements OnInit {
-  public errorMessage: string[] = this.messageService.messages
+  errorMessage: string[] = this.messageService.messages
 
   loginForm = this.formBuilder.group({
     email: ['', Validators.required],

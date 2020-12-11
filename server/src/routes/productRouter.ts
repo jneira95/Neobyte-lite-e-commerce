@@ -8,6 +8,9 @@ function productRouter(productModel: any) {
   router.route('/:id')
     .get(products.getProductById);
 
+  router.route('/')
+    .get(products.getProductList);
+
   return router;
 }
 

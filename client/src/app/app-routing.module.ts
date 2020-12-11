@@ -6,13 +6,20 @@ import { RegisterComponent } from './register/register.component'
 import { ProfileComponent } from './profile/profile.component'
 import { LoginAccessGuard } from './login-access.guard'
 import { AuthGuard } from './auth-access.guard'
+import { ListProductsComponent } from './components/list-products/list-products.component'
+import { HomeComponent } from './components/home/home.component'
 
 const routes: Routes = [
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'detail/:id', component: DetailProductComponent, pathMatch: 'full' },
+  {
+    path: 'list',
+    component: ListProductsComponent
+  },
   { path: 'login', component: LoginComponent, pathMatch: 'full', canActivate: [LoginAccessGuard] },
   { path: 'register', component: RegisterComponent, pathMatch: 'full', canActivate: [LoginAccessGuard] },
   { path: 'profile', component: ProfileComponent, pathMatch: 'full', canActivate: [AuthGuard] },
-  { path: '**', redirectTo: 'detail', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ]
 
 @NgModule({

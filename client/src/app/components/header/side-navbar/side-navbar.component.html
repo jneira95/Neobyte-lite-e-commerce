@@ -31,11 +31,17 @@
 								*ngFor="let listExpand of listItem.categoriesExpand"
 							>
 								<a
-									[routerLink]="[listItem.route, listExpand]"
+									[routerLink]="['/list']" 
+									[queryParams]="
+										listExpand.subRoute 
+										? { category: listItem.route, 'sub-category': listExpand.subRoute } 
+										: { category: listItem.route }
+									"
 									routerLinkActive="active"
 									class="expand-list-item"
+									(click)="closeSidebar()"
 								>
-									{{ listExpand | uppercase }}
+									{{ listExpand.name | uppercase }}
 								</a>
 							</li>
 						</ul>
