@@ -13,19 +13,29 @@ export class SideNavbarComponent {
       category: 'portátiles',
       route: 'laptop',
       icon: 'laptop_chromebook',
-      categoriesExpand: ['portatiles', 'gaming', 'workstation']
+      categoriesExpand: [
+        { name: 'portatiles', subRoute: '' },
+        { name: 'gaming', subRoute: 'gaming' },
+        { name: 'workstation', subRoute: 'workstation' }
+      ]
     },
     {
       category: 'periféricos',
       route: 'peripheral',
       icon: 'mouse',
-      categoriesExpand: ['teclados', 'ratones', 'monitores']
+      categoriesExpand: [
+        { name: 'teclados', subRoute: 'keyboard' },
+        { name: 'ratones', subRoute: 'mouse' },
+        { name: 'monitores', subRoute: 'monitor' }
+      ]
     },
     {
       category: 'smartphones',
       route: 'smartphone',
       icon: 'smartphone',
-      categoriesExpand: ['smartphone']
+      categoriesExpand: [
+        { name: 'smartphone', subRoute: 'smartphone' }
+      ]
     }
   ];
 

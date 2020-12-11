@@ -2,22 +2,33 @@
 	<div class="sidebar-close-wrapper" (click)="closeProfileSidebar()">
 		<button class="btn sidebar-close-btn">
       <mat-icon class="sidebar-close-icon">arrow_forward_ios</mat-icon>
-      <p>Mi Cuenta</p>
+      <p class="sidebar-close-text">Mi Cuenta</p>
 		</button>
 	</div>
 	<nav class="sidebar-navigation">
     <ul>
-      <li>
-        <mat-icon></mat-icon>
-        <p>Lista de deseados</p>
+      <li class="sidebar-navigation-item">
+        <button class="btn sidebar-navigation-btn" (click)="closeProfileSidebar()">
+          <mat-icon class="sidebar-navigation-icon">favorite_border</mat-icon>
+          <p class="sidebar-navigation-text">Lista de deseados</p>
+        </button>
       </li>
-      <li>
-        <mat-icon></mat-icon>
-        <p>Mi Cuenta</p>
+      <li class="sidebar-navigation-item">
+        <button 
+          class="btn sidebar-navigation-btn" 
+          (click)="closeProfileSidebar()"
+          [routerLink]="['profile']"
+          routerLinkActive="active"
+          >
+          <mat-icon class="sidebar-navigation-icon">account_circle</mat-icon>
+          <p class="sidebar-navigation-text">Mi Cuenta</p>
+        </button>
       </li>
-      <li>
-        <mat-icon></mat-icon>
-        <p>Cerrar sesión</p>
+      <li class="sidebar-navigation-item">
+        <button class="btn sidebar-navigation-btn" (click)="closeProfileSidebar()" (click)="logout()">
+          <mat-icon class="sidebar-navigation-icon">exit_to_app</mat-icon>
+          <p class="sidebar-navigation-text">Cerrar sesión</p>
+        </button>
       </li>
     </ul>
 	</nav>
