@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { Observable } from 'rxjs'
-import { ActivatedRoute } from '@angular/router'
+import { switchMap } from 'rxjs/operators'
+import { ActivatedRoute, Router } from '@angular/router'
 import { ProductService } from '../../services/product.service'
 import { IProductItem } from '../../store/models/product-item-model'
 
@@ -10,17 +11,19 @@ import { IProductItem } from '../../store/models/product-item-model'
   styleUrls: ['./list-products.component.scss']
 })
 export class ListProductsComponent {
-  constructor (
-     private route: ActivatedRoute,
-    private productService: ProductService
-  ) {}
+  productList$: Observable<IProductItem>
 
-  ngOnInit (): void {
+  constructor (
+    private route: ActivatedRoute,
+    private router: Router,
+    private productService: ProductService
+  ) {
+    this.productList$ = this.route.queryParams.pipe(switchMap(() => {
+      return this.productService.getProductByQuery(this.currentQuery)
+    }))
   }
 
-  // get paramId (): string {
-  // return this.route.snapshot.paramMap.get('id')
-  // }
-
-  productList$: Observable<IProductItem> = this.productService.getProductList();
+  get currentQuery (): string {
+    return this.router.url.split('?')[1]
+  }
 }
