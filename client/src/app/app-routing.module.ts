@@ -14,15 +14,12 @@ const routes: Routes = [
   { path: 'detail/:id', component: DetailProductComponent, pathMatch: 'full' },
   {
     path: 'list',
-    component: ListProductsComponent,
-    children: [
-      { path: ':type', component: ListProductsComponent }
-    ]
+    component: ListProductsComponent
   },
   { path: 'login', component: LoginComponent, pathMatch: 'full', canActivate: [LoginAccessGuard] },
   { path: 'register', component: RegisterComponent, pathMatch: 'full', canActivate: [LoginAccessGuard] },
   { path: 'profile', component: ProfileComponent, pathMatch: 'full', canActivate: [AuthGuard] },
-  { path: '**', redirectTo: '/list', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ]
 
 @NgModule({
