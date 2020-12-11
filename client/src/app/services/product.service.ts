@@ -1,8 +1,6 @@
-
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs'
-
 import { IProductItem } from '../store/models/product-item-model'
 
 @Injectable({
@@ -19,13 +17,10 @@ export class ProductService {
     return this.http.get<IProductItem>(url)
   }
 
-  getProductList (): Observable<IProductItem> {
-    const url = `${this.mainEndpoint}${this.productEndpoint}`
-    return this.http.get<IProductItem>(url)
-  }
-
-  getProductListFilter (category: string, subCategory: string): Observable<IProductItem> {
-    const url = `${this.mainEndpoint}${this.productEndpoint}/?category=${category}&sub-category=${subCategory}`
+  getProductByQuery (query: any = null): Observable<IProductItem> {
+    const url = query !== null
+      ? `${this.mainEndpoint}${this.productEndpoint}/?${query}`
+      : `${this.mainEndpoint}${this.productEndpoint}`
     return this.http.get<IProductItem>(url)
   }
 }
