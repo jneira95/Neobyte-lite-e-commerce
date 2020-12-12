@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core'
   styleUrls: ['./product-general-specs.component.scss']
 })
 export class ProductGeneralSpecsComponent {
-  @Input() brand: string;
+  @Input() manufacture: string;
   @Input() reference: string;
   @Input() generalSpecs: string[]
 }
