@@ -9,7 +9,7 @@ import { IProductItem } from '../store/models/product-item-model'
 export class ProductService {
   constructor (private http: HttpClient) {}
 
-	private mainEndpoint = 'http://192.168.0.11:5000';
+	private mainEndpoint = 'http://192.168.0.11:5000' || 'http://localhost:5000';
   private productEndpoint = '/product';
 
   getProductById (id: string): Observable<IProductItem> {

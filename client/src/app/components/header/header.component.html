@@ -37,7 +37,12 @@
 			</a>
 			</ng-template>
 			<button class="right-side-btn btn">
-				<mat-icon class="right-side-icon">shopping_cart</mat-icon>
+				<a 
+					[routerLink]="['/cart']"
+					routerLinkActive="active"
+				>
+					<mat-icon class="right-side-icon">shopping_cart</mat-icon>
+			</a>
 			</button>
 		</section>
 	</nav>

@@ -11,6 +11,7 @@ export class UserLoginStateService {
      private router: Router
    ) {
      this.loggedStatus = new BehaviorSubject<boolean>(false)
+     this.getUser() !== null ? this.setValue(true) : this.setValue(false)
    }
 
    setUser (user: object): void {
