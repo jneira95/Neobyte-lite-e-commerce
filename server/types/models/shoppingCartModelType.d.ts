@@ -7,7 +7,7 @@ export interface CartProducts {
   'price-float': number;
   image: string;
   name: string;
-  'products-status: boolean';
+  'product-status': boolean;
 }
 
 interface ShoppingCartModel {
