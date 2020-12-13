@@ -11,4 +11,11 @@ export class ShoppingCartService {
         this.flag = value
       })
     }
+
+    currentCart: string[] = []
+
+    addProductCart (product: string): void {
+      this.currentCart.push(product)
+      console.log(this.currentCart)
+    }
 }

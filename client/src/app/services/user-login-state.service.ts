@@ -14,13 +14,14 @@ export class UserLoginStateService {
      this.getUser() !== null ? this.setValue(true) : this.setValue(false)
    }
 
-   setUser (user: object): void {
-     localStorage.setItem('user', JSON.stringify(user))
+   setUser (id: string): void {
+     const session = { time: Date.now(), id }
+     localStorage.setItem('user', JSON.stringify(session))
      this.loggedStatus.next(true)
    }
 
    getUser () {
-     return localStorage.getItem('user')
+     return JSON.parse(localStorage.getItem('user'))
    }
 
    getValue (): Observable<boolean> {

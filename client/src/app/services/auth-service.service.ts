@@ -18,10 +18,11 @@ export class AuthService {
     private userLoginState: UserLoginStateService
   ) {}
 
-  private authEnpoint = 'http://192.168.0.11:5000/user' || 'http://localhost:5000/user'
+  private authEnpoint = 'http://localhost:5000/user' || 'http://192.168.1.135:5000/user'
   private login = '/login'
   private signup = '/signup'
   private profile = '/profile'
+  private user = '/registered'
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -36,8 +37,8 @@ export class AuthService {
   validateToken (token: any): any {
     const url = `${this.authEnpoint}${this.profile}`
     return this.http.get<any>(url, { headers: { ...this.httpOptions, ...token } })
-      .subscribe((user) => {
-        this.userLoginState.setUser(user)
+      .subscribe(({ id }) => {
+        this.userLoginState.setUser(id)
         this.router.navigate(['profile'])
       })
   }
@@ -59,6 +60,19 @@ export class AuthService {
     const url = `${this.authEnpoint}${this.signup}`
     return this.http.post<any>(url, user).pipe(
       tap(token => this.validateToken(token)),
+      catchError(async (error) => {
+        this.log(
+          error.error.errors
+            .map((error: any) => error.msg)
+        )
+      })
+    )
+  }
+
+  getRegisterUserById (id: string): any {
+    const url = `${this.authEnpoint}${this.user}/${id}`
+    return this.http.get<any>(url).pipe(
+      tap(user => user),
       catchError(async (error) => {
         this.log(
           error.error.errors
