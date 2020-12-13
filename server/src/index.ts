@@ -11,7 +11,7 @@ import usersRouter from './routes/userRouter';
 import startServer from './server';
 
 const app = express();
-const shoppingCartRouter = shoppingCartsRouter(ShoppingCartModel);
+const shoppingCartRouter = shoppingCartsRouter(ShoppingCartModel, UserModel);
 const productRouter = productsRouter(ProductModel);
 const userRouter = usersRouter(UserModel);
 

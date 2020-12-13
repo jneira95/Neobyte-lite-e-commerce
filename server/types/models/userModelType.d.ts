@@ -5,7 +5,7 @@ interface UserModel {
   password: string;
   email: string;
   createAt: number;
-  'shopping-cart': [object]
+  shoppingCart: object;
 }
 
 interface IUser extends UserModel, Document {}

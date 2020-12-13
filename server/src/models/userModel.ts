@@ -18,6 +18,10 @@ const userSchema = new Schema({
     type: Date,
     default: Date.now(),
   },
+  shoppingCart: {
+    type: Schema.Types.ObjectId,
+    ref: 'shoppingcarts',
+  },
 });
 
 export default model<IUser>('User', userSchema, 'users', true);

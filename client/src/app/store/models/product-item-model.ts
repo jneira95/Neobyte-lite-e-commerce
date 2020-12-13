@@ -1,4 +1,5 @@
 export interface IProductItem {
+  _id: string;
   name: string;
   reference: string;
   'part-number'?: string;

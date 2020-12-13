@@ -1,5 +1,3 @@
-import { Document } from 'mongoose';
-
 export interface CartProducts {
   id: string;
   quantity: number;
@@ -10,15 +8,11 @@ export interface CartProducts {
   'product-status': boolean;
 }
 
-interface ShoppingCartModel {
+export interface ShoppingCartModel {
+  _id: string;
   nbtotalproducts: number;
   price: number;
   'price-float': number;
   'shipping-price': number;
   products: CartProducts[],
-  createAt: number;
 }
-
-interface IShoppingCart extends ShoppingCartModel, Document {}
-
-export default IShoppingCart;

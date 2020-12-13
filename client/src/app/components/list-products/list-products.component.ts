@@ -29,8 +29,7 @@ export class ListProductsComponent {
     return this.router.url.split('?')[1]
   }
 
-  addProductToCart (product: string) {
-    console.log(product)
-    this.shoppingCartService.addProductCart(product)
+  addProductToCart (productId: string) {
+    this.shoppingCartService.addProductCart(productId)
   }
 }
