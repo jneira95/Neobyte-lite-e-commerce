@@ -9,16 +9,10 @@ import { Observable } from 'rxjs'
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent {
-  private flag: boolean
-
   constructor (
     private userLoginState: UserLoginStateService,
     private authService: AuthService
-  ) {
-    this.userLoginState.getValue().subscribe((value: boolean) => {
-      this.flag = value
-    })
-  }
+  ) {}
 
   user: any = this.userLoginState.getUser()
   userData$: Observable<object> = this.authService.getRegisterUserById(this.user.id)
