@@ -1,10 +1,12 @@
 import { Router } from 'express';
 import userController from '../controllers/users/userController';
+import registeredUserController from '../controllers/users/registerUserController';
 import validator from '../validator/userValidator';
 import tokenValidation from '../validator/tokenValidator';
 
 function userRouter(UserModel: any) {
   const router = Router();
+  const registeredUser = registeredUserController(UserModel);
   const users = userController(UserModel);
 
   router.route('/signup')
@@ -15,6 +17,9 @@ function userRouter(UserModel: any) {
 
   router.route('/profile')
     .get(tokenValidation, users.tokenValidation);
+
+  router.route('/registered/:id')
+    .get(registeredUser.getUserById);
 
   return router;
 }
