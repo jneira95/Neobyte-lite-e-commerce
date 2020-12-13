@@ -1,22 +1,25 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 import { UserLoginStateService } from '../services/user-login-state.service'
+import { AuthService } from '../services/auth-service.service'
+import { Observable } from 'rxjs'
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent {
+  private flag: boolean
+
   constructor (
-    private userLoginState: UserLoginStateService
-  ) {}
-
-  userData: object = {}
-  ngOnInit (): void {
-    this.userData = { ...JSON.parse(localStorage.getItem('user')) }
+    private userLoginState: UserLoginStateService,
+    private authService: AuthService
+  ) {
+    this.userLoginState.getValue().subscribe((value: boolean) => {
+      this.flag = value
+    })
   }
 
-  logout (): void {
-    this.userLoginState.removeUser()
-  }
+  user: any = this.userLoginState.getUser()
+  userData$: Observable<object> = this.authService.getRegisterUserById(this.user.id)
 }
