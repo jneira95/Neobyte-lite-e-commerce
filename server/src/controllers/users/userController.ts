@@ -64,8 +64,8 @@ function userController(UserModel: any) {
   const tokenValidation = async (req: Request, res: Response) => {
     try {
       const query = req.body.user;
-      const user = await UserModel.findById(query);
-      res.json(user);
+      const { _id } = await UserModel.findById(query);
+      res.json({ id: _id });
     } catch (error) {
       res.json({ errors: [{ msg: 'ERROR_FETCHING_USER' }] });
     }

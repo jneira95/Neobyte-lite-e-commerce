@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 import { Validators, FormBuilder } from '@angular/forms'
 import { AuthService } from '../services/auth-service.service'
 import { MessageService } from '../services/error-message.service'
@@ -11,7 +11,7 @@ import { Router } from '@angular/router'
   styleUrls: ['./login.component.scss']
 })
 
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   errorMessage: string[] = this.messageService.messages
 
   loginForm = this.formBuilder.group({
@@ -34,9 +34,5 @@ export class LoginComponent implements OnInit {
     this.userLoginState.getValue().subscribe((value) => {
       value ? this.route.navigate(['profile']) : this.route.navigate(['login'])
     })
-  }
-
-  ngOnInit (): void {
-
   }
 }

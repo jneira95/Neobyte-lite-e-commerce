@@ -39,6 +39,10 @@ export class SideNavbarComponent {
     }
   ];
 
+  onTop ():void {
+    window.scrollTo(0, 0)
+  }
+
   closeSidebar (): void {
     const closeBtn = document.getElementById('toogleSideBar')
     closeBtn.style.transform = 'translateX(-350px)'

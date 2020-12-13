@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 import { UserLoginStateService } from '../../services/user-login-state.service'
 
 @Component({
@@ -6,14 +6,11 @@ import { UserLoginStateService } from '../../services/user-login-state.service'
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   public flag: boolean;
 
-  constructor (private userLoginState: UserLoginStateService) {}
-
-  ngOnInit (): void {
-    this.userLoginState.getUser() !== null ? this.userLoginState.setValue(true) : this.userLoginState.setValue(false)
-    this.userLoginState.getValue().subscribe((value) => {
+  constructor (private userLoginState: UserLoginStateService) {
+    this.userLoginState.getValue().subscribe((value: boolean) => {
       this.flag = value
     })
   }

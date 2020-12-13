@@ -29,6 +29,7 @@ import { LoginAccessGuard } from './login-access.guard'
 import { AuthGuard } from './auth-access.guard'
 import { ListProductsComponent } from './components/list-products/list-products.component'
 import { HomeComponent } from './components/home/home.component'
+import { CartComponent } from './components/cart/cart.component'
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { HomeComponent } from './components/home/home.component'
     ProfileComponent,
     ProfileSidebarComponent,
     ListProductsComponent,
-    HomeComponent
+    HomeComponent,
+    CartComponent
   ],
   imports: [
     HttpClientModule,

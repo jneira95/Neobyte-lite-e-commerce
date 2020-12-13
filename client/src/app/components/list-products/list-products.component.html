@@ -27,7 +27,7 @@
         <p *ngIf="item.sales" class="product-price-discount">
           {{ item.sales | currency: 'EUR' }}
         </p>   
-        <button *ngIf="item.stock !== 0; else elseBlock" class="product-buy-btn btn">
+        <button *ngIf="item.stock !== 0; else elseBlock" class="product-buy-btn btn" (click)="addProductToCart(item._id)">
           Añadir al carrito
         </button>
         <ng-template #elseBlock>

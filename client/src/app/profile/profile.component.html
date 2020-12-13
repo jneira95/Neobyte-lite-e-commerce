@@ -1,9 +1,5 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1>perfil de usuario</h1>
-<div *ngIf="userData"> {{ userData.username }} </div>
-<button (click)="logout()">logout</button>
+<section *ngIf="userData$ | async as userData" class="user-profile-container">
+  <h2>Bienvenido {{ userData.username }}</h2>
+<img src="https://omi.uk/wp-content/uploads/2020/05/xUnderConstruction.png.pagespeed.ic.HA9e42B4xH.webp" alt="" style="width: 100%;">
+<h3>Proximamente 2021</h3>
+</section>

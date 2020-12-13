@@ -4,6 +4,7 @@ import { switchMap } from 'rxjs/operators'
 import { ActivatedRoute, Router } from '@angular/router'
 import { ProductService } from '../../services/product.service'
 import { IProductItem } from '../../store/models/product-item-model'
+import { ShoppingCartService } from '../../services/shopping-cart.service'
 
 @Component({
   selector: 'app-list-products',
@@ -16,7 +17,8 @@ export class ListProductsComponent {
   constructor (
     private route: ActivatedRoute,
     private router: Router,
-    private productService: ProductService
+    private productService: ProductService,
+    private shoppingCartService: ShoppingCartService
   ) {
     this.productList$ = this.route.queryParams.pipe(switchMap(() => {
       return this.productService.getProductByQuery(this.currentQuery)
@@ -25,5 +27,10 @@ export class ListProductsComponent {
 
   get currentQuery (): string {
     return this.router.url.split('?')[1]
+  }
+
+  addProductToCart (product: string) {
+    console.log(product)
+    this.shoppingCartService.addProductCart(product)
   }
 }
