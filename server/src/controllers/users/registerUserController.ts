@@ -4,7 +4,7 @@ function registeredUserController(UserModel: any) {
   function getUserById(req: Request, res: Response) {
     const { id } = req.params;
     UserModel.findById(id, (errorFindUser: any, user: object) => {
-      if (errorFindUser) res.send(errorFindUser);
+      if (errorFindUser) res.status(404).json(errorFindUser);
       res.json(user);
     });
   }
