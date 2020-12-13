@@ -1,12 +1,13 @@
 import { Router } from 'express';
 import shoppingCartController from '../controllers/carts/shoppingCartController';
+import shoppingCartValidator from '../validator/shoppingCartValidator';
 
-function shoppingCartRouter(shoppingCartModel: any) {
+function shoppingCartRouter(shoppingCartModel: any, UserModel: any) {
   const router = Router();
-  const shoppingCarts = shoppingCartController(shoppingCartModel);
+  const shoppingCarts = shoppingCartController(shoppingCartModel, UserModel);
 
   router.route('/')
-    .get(shoppingCarts.getCart);
+    .post(shoppingCartValidator, shoppingCarts.userShoppingCart);
 
   return router;
 }
