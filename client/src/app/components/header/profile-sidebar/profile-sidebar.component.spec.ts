@@ -25,6 +25,7 @@ describe('ProfileSidebarComponent', () => {
     expect(component).toBeTruthy()
   })
   it('should open and close sidebar', () => {
+    component.logout()
     component.openProfileSidebar()
     component.closeProfileSidebar()
   })

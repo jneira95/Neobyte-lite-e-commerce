@@ -26,5 +26,6 @@ describe('SideNavbarComponent', () => {
   it('should call open and close nav bar', () => {
     component.openSidebar()
     component.closeSidebar()
+    component.onTop()
   })
 })

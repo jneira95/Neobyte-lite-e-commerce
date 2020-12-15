@@ -25,13 +25,18 @@
 			<button class="right-side-btn btn">
 				<mat-icon class="right-side-icon">search</mat-icon>
 			</button>
-			<button *ngIf="flag; else elseBlock" class="right-side-btn btn" (click)="childProfile.openProfileSidebar()" >
+			<button 
+				*ngIf="flag; else elseBlock" 
+				class="right-side-btn btn" 
+				(click)="childProfile.openProfileSidebar()"
+			>
 				<mat-icon class="right-side-icon">account_circle</mat-icon>
 			</button>
 			<ng-template #elseBlock>
 				<a 
 					[routerLink]="['/login']"
 					routerLinkActive="active"
+					(click)="onTop()"
 				>
 					<mat-icon class="right-side-icon">login</mat-icon>
 			</a>
@@ -40,6 +45,7 @@
 				<a 
 					[routerLink]="['/cart']"
 					routerLinkActive="active"
+					(click)="onTop()"
 				>
 					<mat-icon class="right-side-icon">shopping_cart</mat-icon>
 			</a>

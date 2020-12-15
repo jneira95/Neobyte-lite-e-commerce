@@ -3,7 +3,7 @@ import {
 } from 'express';
 import { check, validationResult } from 'express-validator';
 
-const shoppingCart = [
+const shoppingCartValidator = [
   check('_id')
     .isMongoId()
     .withMessage('Debe iniciar sesión para añadir articulos al carrito'),
@@ -14,4 +14,4 @@ const shoppingCart = [
   },
 ];
 
-export default shoppingCart;
+export default shoppingCartValidator;

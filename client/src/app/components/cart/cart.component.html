@@ -1,36 +1,48 @@
-<section class="shopping-cart-container">
+<section 
+  *ngIf="shoppingCart$ | async as shoppingCart; else loading"     
+  class="shopping-cart-container"
+>
   <section class="shopping-cart-heading">
     <h2 class="shopping-cart-title">Productos en la cesta</h2>
     <p class="shopping-cart-info">
-      (<span class="cart-info-total">4</span>)
+      (<span class="cart-info-total"> 
+        {{ shoppingCart.nbtotalproducts }} </span>)
       Articulos en tu cesta
     </p>
   </section>
   <hr>
   <ul class="shopping-cart-list">
-    <li *ngFor="let item of cartList" class="cart-list-item">
+    <li 
+      *ngFor="let item of shoppingCart.products" 
+      class="cart-list-item">
       <section class="list-item-wrapper">
         <figure class="list-item-image">
           <img 
-            src="https://www.neobyte.es/18540-thickbox_default/monitor-asus-24-vg248qz.jpg" alt="product-img" 
+            [src]="item.image" alt="product-img" 
             class="item-image-mini"
           >
         </figure>
         <section class="list-item-info">
-          <p class="item-info-title">Lenovo 100E 2G - Portátil 11.6" N4000 4GB 64GB SSD W10P</p>
-          <p class="item-info-shipping">¡En stock! Recíbelo en 24/48h.</p>
+          <p class="item-info-title"> {{ item.name }} </p>
+          <p *ngIf="item['product-status']" class="item-info-shipping">¡En stock! Recíbelo en 24/48h.</p>
           <section class="item-info-units">
             <section class="info-units-quantity">
-              <button class="unit-quantity-btn btn">
+              <button 
+                class="unit-quantity-btn btn"
+                (click)="decrementProductUnits(item.id)"
+              >
                 <mat-icon class="quantity-icon">arrow_drop_down</mat-icon>
               </button>
-              <p class="unit-quantity-count">1</p>
-              <button class="unit-quantity-btn btn">
+              <p class="unit-quantity-count"> {{ item.quantity }} </p>
+              <button 
+                class="unit-quantity-btn btn"
+                (click)="incrementProductUnits(item.id)"
+              >
                 <mat-icon class="quantity-icon">arrow_drop_up</mat-icon>
               </button>
             </section>
-            <p class="info-units-price">€5.219,00</p>
-            <button class="btn" (click)="log()">
+            <p class="info-units-price"> {{ item.price | currency: 'EUR' }} </p>
+            <button class="btn" (click)="removeProductUnit(item.id)">
               <mat-icon class="info-units-remove">close</mat-icon>
             </button>
           </section>
@@ -41,7 +53,7 @@
   </ul>
   <section class="shopping-cart-resume">
     <section class="shopping-cart-reset">
-      <button class="cart-reset-delete btn">
+      <button class="cart-reset-delete btn" (click)="removeAllProduct(shoppingCart.products)">
         <mat-icon class="reset-delete-icon">delete</mat-icon>
         <p class="reset-delete-text">Vaciar Cesta</p>
       </button>
@@ -56,21 +68,55 @@
     <section class="shopping-cart-total">
       <div class="cart-total-text">
         <p class="total-text">Total productos:</p>
-        <p class="total-price">€4.634.96</p>
+        <p class="total-price"> {{ shoppingCart.price | currency: 'EUR' }} </p>
+      </div>
+      <div class="cart-total-text">
+        <p class="total-text">Total products sin IVA:</p>
+        <p class="total-price"> {{ shoppingCart['price-float'] | currency: 'EUR' }} </p>
       </div>
       <div class="cart-total-text">
         <p class="total-text">Total gastos de envío IVA incluído:</p>
-        <p class="total-price">€4.90</p>
+        <p class="total-price"> {{ shoppingCart['shipping-price'] | currency: 'EUR' }} </p>
       </div>
       <div class="cart-total-text">
         <p class="total-text">Total</p>
-        <p class="total-price">€4.639.86</p>
+        <p class="total-price"> {{ shoppingCart['shipping-price'] + shoppingCart.price | currency: 'EUR' }} </p>
       </div>
     </section>
     <section class="shopping-cart-finalize">
-      <button class="cart-finalize-btn btn">
+      <button class="cart-finalize-btn btn" (click)="purchase(shoppingCart.products)">
         REALIZAR PEDIDO
       </button>
     </section>
   </section>
 </section>
+
+<section *ngIf="!flag" class="shopping-cart-container not-logged">
+  <p class="not-logged-message">Iniciar sesión para añadir articulos al carrito</p>
+  <section class="not-logged-buttons">
+    <button 
+      class="btn user-btn" 
+      [routerLink]="['/login']"
+      routerLinkActive="active"
+    >
+      Inciar sesión
+    </button>
+    <button 
+      class="btn user-btn"
+      [routerLink]="['/register']"
+      routerLinkActive="active"
+    >
+      Registrarse
+    </button>
+  </section>
+</section>
+
+  <ng-template #loading>
+    <app-loading *ngIf="flag && (shoppingCart !== undefined)"></app-loading>
+    <section 
+      class="shopping-cart-container"
+      *ngIf="flag && (shoppingCart === undefined)">
+      No hay articulos en la cesta
+    </section>
+  </ng-template>
+
