@@ -5,7 +5,7 @@
   position: absolute;
   position: fixed;
   height: 100vh;
-  width: 250px;
+  width: 300px;
   z-index: 1000;
   right: 0;
   top: 0;
@@ -47,6 +47,8 @@
         align-items: center;
         .sidebar-navigation-text {
           margin: 0;
+          font-size: 18px;
+          font-weight: 600;
         }
         .sidebar-navigation-icon {
           margin-right: 10px;

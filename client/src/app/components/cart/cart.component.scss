@@ -149,6 +149,10 @@
       .cart-finalize-btn:hover {
         background-color: #BD5800;        
       }
+      .cart-finalize-btn:disabled {
+        background-color: none;        
+        
+      }
     }
   }
 }

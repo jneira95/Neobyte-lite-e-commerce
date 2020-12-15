@@ -1,6 +1,7 @@
+/* eslint-disable no-debugger */
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import { Observable } from 'rxjs'
+import { Observable, BehaviorSubject } from 'rxjs'
 import { catchError, tap } from 'rxjs/operators'
 import { ProductService } from './product.service'
 import { MessageService } from './error-message.service'
@@ -9,6 +10,13 @@ import { UserLoginStateService } from './user-login-state.service'
 import { CartProducts, ShoppingCartModel } from '../store/models/shoppingCartModel'
 import { IProductItem } from '../store/models/product-item-model'
 
+const action = {
+  increment: 'INCREMENT',
+  decrement: 'DECREMENT',
+  remove: 'REMOVE',
+  removeAll: 'CLEAR'
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,26 +24,27 @@ export class ShoppingCartService {
   private mainEndpoint = 'http://192.168.0.11:5000' || 'http://localhost:5000'
   private cartEndpoint = '/cart';
   private flag: boolean = false
+   public currentShoppignCart$: BehaviorSubject<ShoppingCartModel> | null
 
-  constructor (
+   constructor (
     private http: HttpClient,
     private messageService: MessageService,
     private productService: ProductService,
     private userLoginState: UserLoginStateService
-  ) {
-    this.userLoginState.getValue().subscribe(isUserLogged => {
-      this.flag = isUserLogged
-      if (isUserLogged) {
-        this.user = this.userLoginState.getUser()
-        this.getUserShoppingCart(this.user.id).subscribe((userShoppingCart) => {
-          if (userShoppingCart) this.updatedCart = userShoppingCart
-        })
-      }
-    })
-  }
+   ) {
+     this.currentShoppignCart$ = new BehaviorSubject<ShoppingCartModel>(null)
+     this.userLoginState.getValue().subscribe(isUserLogged => {
+       this.flag = isUserLogged
+       if (isUserLogged) {
+         this.user = this.userLoginState.getUser()
+         this.getUserShoppingCart(this.user.id).subscribe((userShoppingCart) => {
+           if (userShoppingCart) this.updatedCart = userShoppingCart
+         })
+       }
+     })
+   }
 
   user: any = this.getUserShoppingCart(this.myUser)
-
   updatedCart: ShoppingCartModel | null = null
 
   get myUser () {
@@ -48,13 +57,16 @@ export class ShoppingCartService {
   }
 
   getUserShoppingCart (userId: string): Observable<ShoppingCartModel> {
-    console.log('getUserShoppingCart', userId)
     const url = `${this.mainEndpoint}${this.cartEndpoint}/${userId}`
-    return this.flag && this.http.get<ShoppingCartModel>(url)
+    return this.flag && this.http.get<ShoppingCartModel>(url).pipe(
+      tap((value) => {
+        this.currentShoppignCart$.next(value)
+      })
+    )
   }
 
   saveCurrentCart (shoppingCart:any): Observable<any> {
-    console.log('')
+    this.currentShoppignCart$.next(shoppingCart)
     const url = `${this.mainEndpoint}${this.cartEndpoint}`
     return this.http.post<any>(url, { ...shoppingCart, _id: this.flag ? this.user.id : null }).pipe(
       tap(cart => {
@@ -70,7 +82,6 @@ export class ShoppingCartService {
   }
 
   updateShoppingCart (currentCartProductList: CartProducts[]) {
-    console.log('updateShoppingCart')
     const shoppingCartModel: ShoppingCartModel = {
       nbtotalproducts: this.updatedCart !== null
         ? this.updatedCart.nbtotalproducts
@@ -103,20 +114,22 @@ export class ShoppingCartService {
     product: any = null,
     cartProductList: CartProducts[],
     change: string,
-    productId: string
+    productId: string | null
   ) {
-    console.log('updateCartProductList')
-    const currentCartProductList = cartProductList
+    let currentCartProductList = cartProductList
+    if (change === action.removeAll) {
+      currentCartProductList = []
+      return this.updateShoppingCart(currentCartProductList)
+    }
     let noStock: boolean
-    currentCartProductList.forEach((item) => {
+    currentCartProductList.forEach((item, idx, array) => {
       switch (change) {
-        case 'INCREMENT':
+        case action.increment:
           if (
             item.id === product._id &&
             item.quantity < product.stock &&
             product['product-status'] === true
           ) {
-            console.log('updateCartProductList --> INCREMENT')
             noStock = false
             item.quantity++
             item.price = product.price * item.quantity
@@ -126,27 +139,32 @@ export class ShoppingCartService {
             noStock = true
           }
           break
-        case 'DECREMENT':
+        case action.decrement:
           if (
             item.id === productId
           ) {
-            console.log('updateCartProductList --> DECREMENT')
+            if (item.quantity === 1) array.splice(idx, 1)
             item.quantity--
             item.price = product.price * item.quantity
             item['price-float'] = Number(((product.price / 1.21) *
             item.quantity).toFixed(2))
           }
           break
+        case action.remove:
+          if (
+            item.id === productId
+          ) {
+            array.splice(idx, 1)
+          }
+          break
         default:
           break
       }
     })
-    console.log(noStock)
     if (!noStock) this.updateShoppingCart(currentCartProductList)
   }
 
   pushNewProduct (product: any, cartProductList: CartProducts[]) {
-    console.log('pushNewProduct')
     const currentCartProductList = cartProductList
     currentCartProductList.push({
       id: product._id,
@@ -160,16 +178,14 @@ export class ShoppingCartService {
     this.updateShoppingCart(currentCartProductList)
   }
 
-  addProductCart (productId: string, change: string = 'INCREMENT'): void {
-    console.log('addProductCart')
+  addProductCart (productId: string, change: string = action.increment): void {
     const cartProductList: CartProducts[] = this.updatedCart !== null
       ? this.updatedCart.products
       : []
     this.productService.getProductById(productId)
       .subscribe((product: IProductItem) => {
         switch (change) {
-          case 'INCREMENT':
-            console.log('INCREMENT')
+          case action.increment:
             if (cartProductList.find((cartList) =>
               cartList.id === product._id) === undefined
             ) {
@@ -178,12 +194,15 @@ export class ShoppingCartService {
             }
             this.updateCartProductList(product, cartProductList, change, null)
             break
-          case 'DECREMENT':
+          case action.decrement:
             this.updateCartProductList(
               product, cartProductList, change, productId
             )
             break
-          case 'REMOVE':
+          case action.remove:
+            this.updateCartProductList(
+              product, cartProductList, change, productId
+            )
             break
           default:
             break

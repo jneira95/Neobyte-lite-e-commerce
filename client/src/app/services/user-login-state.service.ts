@@ -41,7 +41,7 @@ export class UserLoginStateService {
    }
 
    removeUser (): void {
-     localStorage.removeItem('user')
+     localStorage.removeItem('nbSession')
      this.loggedStatus.next(false)
      this.router.navigate(['login'])
    }

@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core'
 import { Observable } from 'rxjs'
-import { switchMap, tap } from 'rxjs/operators'
 import { ShoppingCartService } from '../../services/shopping-cart.service'
 import { UserLoginStateService } from '../../services/user-login-state.service'
-import { ShoppingCartModel } from '../../store/models/shoppingCartModel'
+import { ShoppingCartModel, CartProducts } from '../../store/models/shoppingCartModel'
+
+const action = {
+  increment: 'INCREMENT',
+  decrement: 'DECREMENT',
+  remove: 'REMOVE',
+  removeAll: 'CLEAR'
+}
 
 @Component({
   selector: 'app-cart',
@@ -12,52 +18,50 @@ import { ShoppingCartModel } from '../../store/models/shoppingCartModel'
 })
 export class CartComponent implements OnInit {
   public flag: boolean
-  private currentUser: any
+  private currentUser: string
 
   constructor (
     private shoppingCartService: ShoppingCartService,
     private userLoginState: UserLoginStateService
-  ) {
-    console.log('contructor', this.flag)
-  }
+  ) { }
 
-  shoppingCart$: Observable<ShoppingCartModel> = this.shoppingCartService.getUserShoppingCart(this.myuser)
+  shoppingCart$: Observable<ShoppingCartModel> = this.shoppingCartService.currentShoppignCart$
 
   get myuser () {
-    console.log('myuser')
-    let user: any
+    this.userLoginState.getValue().subscribe((state) => {
+      this.flag = state
+    })
     this.userLoginState.getLocalUser().subscribe((user) => {
       this.currentUser = user.id
     })
-    return this.flag ? user.id : null
+    return this.flag ? this.currentUser : null
   }
 
   incrementProductUnits (id: string) {
-    const increment = 'INCREMENT'
-    // this.userShoppingCart$ = this..map((cartList) => {
-    //   if (cartList.id === id) {
-    //     cartList.quantity++
-    //   }
-    //   return cartList
-    // })
-    this.shoppingCartService.addProductCart(id, increment)
+    this.shoppingCartService.addProductCart(id, action.increment)
   }
 
   decrementProductUnits (id: string) {
-    const decrement = 'DECREMENT'
-    // this.cartProductList = this.cartProductList.map((cartList) => {
-    //   if (cartList.id === id) {
-    //     cartList.quantity--
-    //   }
-    //   return cartList
-    // })
-    this.shoppingCartService.addProductCart(id, decrement)
+    this.shoppingCartService.addProductCart(id, action.decrement)
   }
 
-  ngOnInit ():void {
-    this.userLoginState.getValue().subscribe((value) => {
-      this.flag = value
+  removeProductUnit (id: string) {
+    this.shoppingCartService.addProductCart(id, action.remove)
+  }
+
+  removeAllProduct (currentCartList: CartProducts[]) {
+    this.shoppingCartService.updateCartProductList(null, currentCartList, action.removeAll, null)
+    window.scrollTo(0, 0)
+  }
+
+  purchase (currentCartList: CartProducts[]) {
+    this.removeAllProduct(currentCartList)
+  }
+
+  ngOnInit (): void {
+    this.userLoginState.getValue().subscribe((state) => {
+      this.flag = state
     })
-    console.log('onInit', this.flag)
+    this.shoppingCartService.getUserShoppingCart(this.myuser)
   }
 }

@@ -1,5 +1,5 @@
 <section 
-  *ngIf="shoppingCart; else loading"     
+  *ngIf="shoppingCart$ | async as shoppingCart; else loading"     
   class="shopping-cart-container"
 >
   <section class="shopping-cart-heading">
@@ -12,7 +12,9 @@
   </section>
   <hr>
   <ul class="shopping-cart-list">
-    <li *ngFor="let item of shoppingCart.products" class="cart-list-item">
+    <li 
+      *ngFor="let item of shoppingCart.products" 
+      class="cart-list-item">
       <section class="list-item-wrapper">
         <figure class="list-item-image">
           <img 
@@ -40,7 +42,7 @@
               </button>
             </section>
             <p class="info-units-price"> {{ item.price | currency: 'EUR' }} </p>
-            <button class="btn" (click)="log()">
+            <button class="btn" (click)="removeProductUnit(item.id)">
               <mat-icon class="info-units-remove">close</mat-icon>
             </button>
           </section>
@@ -51,7 +53,7 @@
   </ul>
   <section class="shopping-cart-resume">
     <section class="shopping-cart-reset">
-      <button class="cart-reset-delete btn">
+      <button class="cart-reset-delete btn" (click)="removeAllProduct(shoppingCart.products)">
         <mat-icon class="reset-delete-icon">delete</mat-icon>
         <p class="reset-delete-text">Vaciar Cesta</p>
       </button>
@@ -82,7 +84,7 @@
       </div>
     </section>
     <section class="shopping-cart-finalize">
-      <button class="cart-finalize-btn btn">
+      <button class="cart-finalize-btn btn" (click)="purchase(shoppingCart.products)">
         REALIZAR PEDIDO
       </button>
     </section>
