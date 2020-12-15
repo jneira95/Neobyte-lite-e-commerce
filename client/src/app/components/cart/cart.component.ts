@@ -13,21 +13,27 @@ import { ShoppingCartModel } from '../../store/models/shoppingCartModel'
 export class CartComponent implements OnInit {
   public flag: boolean
   private currentUser: any
+
   constructor (
     private shoppingCartService: ShoppingCartService,
     private userLoginState: UserLoginStateService
-  ) {}
+  ) {
+    console.log('contructor', this.flag)
+  }
 
-  userShoppingCart$: Observable<ShoppingCartModel> = this.shoppingCartService.getUserShoppingCart(this.myuser)
+  shoppingCart$: Observable<ShoppingCartModel> = this.shoppingCartService.getUserShoppingCart(this.myuser)
 
   get myuser () {
-    const user = this.userLoginState.getUser()
+    console.log('myuser')
+    let user: any
+    this.userLoginState.getLocalUser().subscribe((user) => {
+      this.currentUser = user.id
+    })
     return this.flag ? user.id : null
   }
 
   incrementProductUnits (id: string) {
     const increment = 'INCREMENT'
-    this.userShoppingCart$ = this.shoppingCartService.getUserShoppingCart(this.myuser)
     // this.userShoppingCart$ = this..map((cartList) => {
     //   if (cartList.id === id) {
     //     cartList.quantity++
@@ -52,8 +58,6 @@ export class CartComponent implements OnInit {
     this.userLoginState.getValue().subscribe((value) => {
       this.flag = value
     })
-    this.userLoginState.getLocalUser().subscribe((user) => {
-      this.currentUser = user
-    })
+    console.log('onInit', this.flag)
   }
 }

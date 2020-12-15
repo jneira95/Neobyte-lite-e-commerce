@@ -8,7 +8,7 @@ import UserModel from './models/userModel';
 import shoppingCartsRouter from './routes/shoppingCartRouter';
 import productsRouter from './routes/productRouter';
 import usersRouter from './routes/userRouter';
-import startServer from './server';
+import startServer from './startServer';
 
 const app = express();
 const shoppingCartRouter = shoppingCartsRouter(ShoppingCartModel, UserModel);

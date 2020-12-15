@@ -1,7 +1,6 @@
 <section *ngIf="userData$ | async as userData; else loading" class="user-profile-container">
   <h2>Bienvenido {{ userData.username }}</h2>
   <ng-container *ngIf="userData.username === 'tintin'">
-    <p >Hola Tintin</p>
     <img src="https://colegiolavallina.com/web/wp-content/uploads/2019/02/tintin_milu2.jpg" alt="" style="width: 100%; border-radius: 150px;">
   </ng-container>
   <ng-container *ngIf="userData.username !== 'tintin'">

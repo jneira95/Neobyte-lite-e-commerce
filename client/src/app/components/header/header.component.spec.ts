@@ -22,9 +22,7 @@ describe('HeaderComponent', () => {
   })
 
   it('should create', () => {
-    expect(component).toBeTruthy()
-  })
-  it('should cac', () => {
+    component.onTop()
     expect(component).toBeTruthy()
   })
 })

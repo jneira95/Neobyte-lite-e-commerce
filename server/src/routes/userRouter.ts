@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import userController from '../controllers/users/userController';
-import registeredUserController from '../controllers/users/registerUserController';
+import registeredUserController from '../controllers/users/registeredUserController';
 import validator from '../validator/userValidator';
-import tokenValidation from '../validator/tokenValidator';
+import tokenValidation from '../validator/tokenValidation';
 
 function userRouter(UserModel: any) {
   const router = Router();

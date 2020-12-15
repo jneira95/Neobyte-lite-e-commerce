@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-
+import { RouterModule } from '@angular/router'
+import { RouterTestingModule } from '@angular/router/testing'
+import { HttpClientTestingModule } from '@angular/common/http/testing'
 import { ProductDescriptionComponent } from './product-description.component'
 
 describe('ProductDescriptionComponent', () => {
@@ -8,6 +10,7 @@ describe('ProductDescriptionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule, RouterModule.forRoot([]), RouterTestingModule],
       declarations: [ProductDescriptionComponent]
     })
       .compileComponents()

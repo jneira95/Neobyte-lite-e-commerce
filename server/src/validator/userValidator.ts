@@ -3,7 +3,7 @@ import {
 } from 'express';
 import { check, validationResult } from 'express-validator';
 
-const validators = {
+const userValidator = {
   loginValidation: [
     check('email')
       .isEmail()
@@ -41,4 +41,4 @@ const validators = {
   ],
 };
 
-export default validators;
+export default userValidator;

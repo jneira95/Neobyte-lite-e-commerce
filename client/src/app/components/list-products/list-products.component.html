@@ -36,7 +36,11 @@
           Añadir al carrito
         </button>
         <ng-template #elseBlock>
-          <button class="product-buy-btn btn">
+          <button 
+            class="product-buy-btn btn"
+            [routerLink]="['../detail', item._id]" 
+            routerLinkActive="active"  
+          >
             Más
           </button>
         </ng-template>

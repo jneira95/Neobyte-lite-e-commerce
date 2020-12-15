@@ -1,5 +1,5 @@
 <section 
-  *ngIf="userShoppingCart$ | async as shoppingCart; else loading"     
+  *ngIf="shoppingCart; else loading"     
   class="shopping-cart-container"
 >
   <section class="shopping-cart-heading">
@@ -110,6 +110,11 @@
 </section>
 
   <ng-template #loading>
-    <app-loading *ngIf="flag"></app-loading>
+    <app-loading *ngIf="flag && (shoppingCart !== undefined)"></app-loading>
+    <section 
+      class="shopping-cart-container"
+      *ngIf="flag && (shoppingCart === undefined)">
+      No hay articulos en la cesta
+    </section>
   </ng-template>
 

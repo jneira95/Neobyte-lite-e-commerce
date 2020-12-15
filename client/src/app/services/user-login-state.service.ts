@@ -13,23 +13,23 @@ export interface localUser {
 export class UserLoginStateService {
    private loggedStatus: BehaviorSubject<boolean>;
    private localUser: BehaviorSubject<localUser> | null
+   private nonState: any
    constructor (
      private router: Router
    ) {
      this.loggedStatus = new BehaviorSubject<boolean>(false)
      this.localUser = new BehaviorSubject<localUser>(null)
-     this.getUser() !== null ? this.setValue(true) : this.setValue(false)
-     this.getUser() !== null ? this.setLocalUser(this.getUser()) : this.setLocalUser(null)
+     this.nonState = this.getUser() !== null ? (this.setValue(true), this.setLocalUser(this.getUser())) : (this.setValue(false), this.setLocalUser(null))
    }
 
    setUser (id: string): void {
      const session = { time: Date.now(), id }
-     localStorage.setItem('user', JSON.stringify(session))
+     localStorage.setItem('nbSession', JSON.stringify(session))
      this.loggedStatus.next(true)
    }
 
    getUser () {
-     return JSON.parse(localStorage.getItem('user'))
+     return JSON.parse(localStorage.getItem('nbSession'))
    }
 
    getValue (): Observable<boolean> {
