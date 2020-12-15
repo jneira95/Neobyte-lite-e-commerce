@@ -23,9 +23,11 @@ export class CartComponent implements OnInit {
   constructor (
     private shoppingCartService: ShoppingCartService,
     private userLoginState: UserLoginStateService
-  ) { }
+  ) {
 
-  shoppingCart$: Observable<ShoppingCartModel> = this.shoppingCartService.currentShoppignCart$
+  }
+
+  shoppingCart$: Observable<ShoppingCartModel> | null = this.shoppingCartService.currentShoppignCart$
 
   get myuser () {
     this.userLoginState.getValue().subscribe((state) => {
@@ -61,7 +63,8 @@ export class CartComponent implements OnInit {
   ngOnInit (): void {
     this.userLoginState.getValue().subscribe((state) => {
       this.flag = state
+      !this.flag && (this.shoppingCart$ = null)
     })
-    this.shoppingCartService.getUserShoppingCart(this.myuser)
+    this.flag && this.shoppingCartService.getUserShoppingCart(this.myuser)
   }
 }
