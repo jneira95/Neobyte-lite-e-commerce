@@ -9,6 +9,9 @@ function shoppingCartRouter(shoppingCartModel: any, UserModel: any) {
   router.route('/')
     .post(shoppingCartValidator, shoppingCarts.userShoppingCart);
 
+  router.route('/:id')
+    .get(shoppingCarts.getCurrentCart);
+
   return router;
 }
 

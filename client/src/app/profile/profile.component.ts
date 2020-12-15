@@ -2,6 +2,7 @@ import { Component } from '@angular/core'
 import { UserLoginStateService } from '../services/user-login-state.service'
 import { AuthService } from '../services/auth-service.service'
 import { Observable } from 'rxjs'
+import { IUser } from '../store/models/user.model'
 
 @Component({
   selector: 'app-profile',
@@ -15,5 +16,5 @@ export class ProfileComponent {
   ) {}
 
   user: any = this.userLoginState.getUser()
-  userData$: Observable<object> = this.authService.getRegisterUserById(this.user.id)
+  userData$: Observable<IUser> = this.authService.getRegisterUserById(this.user.id)
 }

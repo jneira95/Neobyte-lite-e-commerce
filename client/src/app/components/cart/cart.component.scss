@@ -28,6 +28,7 @@
         }
       }
       .list-item-info {
+        width: 100%;
         .item-info-title {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -43,6 +44,7 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
+          padding-right: 10px;
           .info-units-quantity {
             display: flex;
             align-items: center;
@@ -153,4 +155,36 @@
 
 p {
   margin: 0;
+}
+
+.not-logged {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .not-logged-message {
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .not-logged-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    .user-btn {
+      cursor: pointer;
+      transition: .1s;
+      font-weight: 600;
+      font-size: 18px;
+      border-radius: 6px;
+      background: #FF7700;
+      color: white;
+      padding: 10px 30px;
+    }
+    .user-btn:hover {
+      background: #BD5800;
+    }
+  }
 }

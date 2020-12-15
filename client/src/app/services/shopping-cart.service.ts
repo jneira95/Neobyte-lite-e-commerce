@@ -7,6 +7,7 @@ import { MessageService } from './error-message.service'
 import { UserLoginStateService } from './user-login-state.service'
 
 import { CartProducts, ShoppingCartModel } from '../store/models/shoppingCartModel'
+import { IProductItem } from '../store/models/product-item-model'
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ import { CartProducts, ShoppingCartModel } from '../store/models/shoppingCartMod
 export class ShoppingCartService {
   private mainEndpoint = 'http://192.168.0.11:5000' || 'http://localhost:5000'
   private cartEndpoint = '/cart';
-  public flag: boolean;
+  private flag: boolean = false
 
   constructor (
     private http: HttpClient,
@@ -22,42 +23,41 @@ export class ShoppingCartService {
     private productService: ProductService,
     private userLoginState: UserLoginStateService
   ) {
-    this.userLoginState.getValue().subscribe((value: boolean) => {
+    this.userLoginState.getValue().subscribe(value => {
       this.flag = value
+      if (value) {
+        this.user = this.userLoginState.getUser()
+        this.getUserShoppingCart(this.user.id).subscribe((value) => {
+          if (value) this.updatedCart = value
+        })
+      }
     })
   }
 
-  updatedCart: any = null
-  user: any = this.userLoginState.getUser()
+  user: any = this.getUserShoppingCart(this.myUser)
 
-  cartProductList: CartProducts[] =
-  this.updatedCart !== null
-    ? this.updatedCart.products
-    : [];
+  updatedCart$: Observable<ShoppingCartModel> | null = null
+  updatedCart: ShoppingCartModel | null = null
 
-  shoppingCart: ShoppingCartModel = {
-    _id: this.user !== null ? this.user.id : null,
-    nbtotalproducts: this.updatedCart !== null
-      ? this.updatedCart.nbtotalproducts
-      : null,
-    price: this.updatedCart !== null
-      ? this.updatedCart.price
-      : null,
-    'price-float': this.updatedCart !== null
-      ? this.updatedCart['price-float']
-      : null,
-    'shipping-price': 4.90,
-    products: this.cartProductList
+  get myUser () {
+    const user = this.userLoginState.getUser()
+    return this.flag ? user.id : null
   }
 
   log (message: string[]): void {
     this.messageService.add(message)
   }
 
+  getUserShoppingCart (userId: string): Observable<ShoppingCartModel> {
+    const url = `${this.mainEndpoint}${this.cartEndpoint}/${userId}`
+    return this.flag && this.http.get<ShoppingCartModel>(url)
+  }
+
   saveCurrentCart (shoppingCart:any): Observable<any> {
     const url = `${this.mainEndpoint}${this.cartEndpoint}`
-    return this.http.post<any>(url, shoppingCart).pipe(
+    return this.http.post<any>(url, { ...shoppingCart, _id: this.flag ? this.user.id : null }).pipe(
       tap(cart => {
+        this.updatedCart$ = cart
         this.updatedCart = cart
       }),
       catchError(async (error) => {
@@ -69,30 +69,80 @@ export class ShoppingCartService {
     )
   }
 
-  updateShoppingCart (cartList: any) {
-    this.shoppingCart.nbtotalproducts = cartList.reduce((acc: number, currentValue: any): number => acc + currentValue.quantity, 0)
-    this.shoppingCart.price = Number(cartList.reduce((acc: number, currentValue: any): number => acc + currentValue.price, 0).toFixed(2))
-    this.shoppingCart['price-float'] = Number(cartList.reduce((acc: number, currentValue: any): number => acc + currentValue['price-float'], 0).toFixed(2))
-    this.saveCurrentCart(this.shoppingCart).subscribe()
+  updateShoppingCart (currentCartProductList: CartProducts[]) {
+    const shoppingCartModel: ShoppingCartModel = {
+      nbtotalproducts: this.updatedCart !== null
+        ? this.updatedCart.nbtotalproducts
+        : null,
+      price: this.updatedCart !== null
+        ? this.updatedCart.price
+        : null,
+      'price-float': this.updatedCart !== null
+        ? this.updatedCart['price-float']
+        : null,
+      'shipping-price': 4.90,
+      products: currentCartProductList
+    }
+    shoppingCartModel.nbtotalproducts = currentCartProductList.reduce(
+      (acc: number, currentValue: any): number =>
+        acc + currentValue.quantity, 0)
+
+    shoppingCartModel.price = Number(currentCartProductList.reduce(
+      (acc: number, currentValue: any): number =>
+        acc + currentValue.price, 0).toFixed(2))
+
+    shoppingCartModel['price-float'] = Number(currentCartProductList.reduce(
+      (acc: number, currentValue: any): number =>
+        acc + currentValue['price-float'], 0).toFixed(2))
+
+    this.saveCurrentCart(shoppingCartModel).subscribe()
   }
 
-  updateCartProductList (product: any) {
-    this.cartProductList.forEach((item) => {
-      if (
-        item.id === product._id &&
-          item.quantity < product.stock &&
-          product['product-status'] === true
-      ) {
-        item.quantity++
-        item.price = product.price * item.quantity
-        item['price-float'] = Number(((product.price / 1.21) * item.quantity).toFixed(2))
+  updateCartProductList (
+    product: any = null,
+    cartProductList: CartProducts[],
+    change: string,
+    productId: string
+  ) {
+    const currentCartProductList = cartProductList
+    let noStock: boolean
+    currentCartProductList.forEach((item) => {
+      switch (change) {
+        case 'INCREMENT':
+          if (
+            item.id === product._id &&
+            item.quantity < product.stock &&
+            product['product-status'] === true
+          ) {
+            noStock = false
+            item.quantity++
+            item.price = product.price * item.quantity
+            item['price-float'] = Number(((product.price / 1.21) *
+              item.quantity).toFixed(2))
+          } else {
+            noStock = true
+          }
+          break
+        case 'DECREMENT':
+          if (
+            item.id === productId
+          ) {
+            item.quantity--
+            item.price = product.price * item.quantity
+            item['price-float'] = Number(((product.price / 1.21) *
+            item.quantity).toFixed(2))
+          }
+          break
+        default:
+          break
       }
     })
-    this.updateShoppingCart(this.cartProductList)
+    if (!noStock) this.updateShoppingCart(currentCartProductList)
   }
 
-  pushNewProduct (product: any) {
-    this.cartProductList.push({
+  pushNewProduct (product: any, cartProductList: CartProducts[]) {
+    const currentCartProductList = cartProductList
+    currentCartProductList.push({
       id: product._id,
       quantity: 1,
       price: product.price,
@@ -101,18 +151,35 @@ export class ShoppingCartService {
       name: product.name,
       'product-status': product['product-status']
     })
+    this.updateShoppingCart(currentCartProductList)
   }
 
-  addProductCart (productId: string): void {
-    this.productService.getProductById(productId).subscribe((product) => {
-      if (this.cartProductList.find((cartList) =>
-        cartList.id === product._id) === undefined
-      ) {
-        this.pushNewProduct(product)
-        this.updateShoppingCart(this.cartProductList)
-        return true
-      }
-      this.updateCartProductList(product)
-    })
+  addProductCart (productId: string, change: string = 'INCREMENT'): void {
+    const cartProductList: CartProducts[] = this.updatedCart !== null
+      ? this.updatedCart.products
+      : []
+    this.productService.getProductById(productId)
+      .subscribe((product: IProductItem) => {
+        switch (change) {
+          case 'INCREMENT':
+            if (cartProductList.find((cartList) =>
+              cartList.id === product._id) === undefined
+            ) {
+              this.pushNewProduct(product, cartProductList)
+              return true
+            }
+            this.updateCartProductList(product, cartProductList, change, null)
+            break
+          case 'DECREMENT':
+            this.updateCartProductList(
+              product, cartProductList, change, productId
+            )
+            break
+          case 'REMOVE':
+            break
+          default:
+            break
+        }
+      })
   }
 }

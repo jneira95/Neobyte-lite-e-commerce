@@ -9,7 +9,6 @@ export interface CartProducts {
 }
 
 export interface ShoppingCartModel {
-  _id: string;
   nbtotalproducts: number;
   price: number;
   'price-float': number;

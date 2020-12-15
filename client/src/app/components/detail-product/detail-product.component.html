@@ -1,4 +1,4 @@
-<main *ngIf="product$ | async as product" class="container">
+<main *ngIf="product$ | async as product; else loading" class="container">
   <h2 class="product-title">{{ product.name }}</h2>
 
   <app-images-gallery [images]="product.images"></app-images-gallery>
@@ -39,3 +39,6 @@
     [generalDescription]="product.generalDescription"
   ></app-product-description>
 </main>
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

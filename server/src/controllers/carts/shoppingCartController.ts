@@ -35,7 +35,19 @@ function shoppingCartController(ShoppingCartModel: any, UserModel: any) {
     return true;
   };
 
-  return { userShoppingCart };
+  const getCurrentCart = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    if (id === null) return res.end('end');
+    const userData = await UserModel.findById(id);
+    if (userData.shoppingCart) {
+      const cartId = String(userData.shoppingCart);
+      const currentUserShoppingCart = await ShoppingCartModel.findById(cartId);
+      return res.json(currentUserShoppingCart);
+    }
+    return false;
+  };
+
+  return { userShoppingCart, getCurrentCart };
 }
 
 export default shoppingCartController;

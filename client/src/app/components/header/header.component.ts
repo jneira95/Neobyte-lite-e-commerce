@@ -7,7 +7,11 @@ import { UserLoginStateService } from '../../services/user-login-state.service'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  public flag: boolean;
+  public flag: boolean
+
+  onTop ():void {
+    window.scrollTo(0, 0)
+  }
 
   constructor (private userLoginState: UserLoginStateService) {
     this.userLoginState.getValue().subscribe((value: boolean) => {

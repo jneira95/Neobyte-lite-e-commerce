@@ -1,6 +1,11 @@
-<section *ngIf="productList$ | async as product" class="list-product-container">
+<section 
+  *ngIf="productList$ | async as product; else loading" 
+  class="list-product-container">
+
   <ng-container *ngFor="let item of product">
+
     <section class="product-outer-wrapper">
+
       <section class="list-product-card">
         <div *ngIf="item.stock !== 0" class="product-state-new">
           <span>Nuevo</span>
@@ -23,10 +28,10 @@
         </p>   
         <p class="product-price">
           {{ item.price | currency: 'EUR' }}
-        </p>   
+        </p>  
         <p *ngIf="item.sales" class="product-price-discount">
           {{ item.sales | currency: 'EUR' }}
-        </p>   
+        </p>  
         <button *ngIf="item.stock !== 0; else elseBlock" class="product-buy-btn btn" (click)="addProductToCart(item._id)">
           Añadir al carrito
         </button>
@@ -36,6 +41,12 @@
           </button>
         </ng-template>
       </section>
+
     </section>
+
   </ng-container>
+
 </section>
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

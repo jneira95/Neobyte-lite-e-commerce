@@ -2,7 +2,6 @@ import { model, Schema } from 'mongoose';
 import IShoppingCart from '../../types/models/shoppingCartModelType';
 
 const shoppingCartSchema = new Schema({
-  // _id: { type: String },
   nbtotalproducts: { type: Number },
   price: { type: Number },
   'price-float': { type: Number },

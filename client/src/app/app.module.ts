@@ -30,6 +30,8 @@ import { AuthGuard } from './auth-access.guard'
 import { ListProductsComponent } from './components/list-products/list-products.component'
 import { HomeComponent } from './components/home/home.component'
 import { CartComponent } from './components/cart/cart.component'
+import { MatProgressBarModule } from '@angular/material/progress-bar'
+import { LoadingComponent } from './components/loading/loading.component'
 
 @NgModule({
   declarations: [
@@ -51,7 +53,8 @@ import { CartComponent } from './components/cart/cart.component'
     ProfileSidebarComponent,
     ListProductsComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    LoadingComponent
   ],
   imports: [
     HttpClientModule,
@@ -63,7 +66,8 @@ import { CartComponent } from './components/cart/cart.component'
     MatDividerModule,
     MatExpansionModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressBarModule
   ],
   providers: [LoginAccessGuard, AuthGuard],
   bootstrap: [AppComponent]
