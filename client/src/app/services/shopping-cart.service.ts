@@ -21,7 +21,7 @@ const action = {
   providedIn: 'root'
 })
 export class ShoppingCartService {
-  private mainEndpoint = 'http://192.168.0.11:5000' || 'http://localhost:5000'
+  private mainEndpoint = 'http://192.168.1.134:5000' || 'http://localhost:5000'
   private cartEndpoint = '/cart';
   private flag: boolean = false
    public currentShoppignCart$: BehaviorSubject<ShoppingCartModel> | null

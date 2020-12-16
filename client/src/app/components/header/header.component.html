@@ -41,13 +41,18 @@
 					<mat-icon class="right-side-icon">login</mat-icon>
 			</a>
 			</ng-template>
-			<button class="right-side-btn btn">
+			<button class="right-side-btn btn shopping-cart-btn">
 				<a 
 					[routerLink]="['/cart']"
 					routerLinkActive="active"
 					(click)="onTop()"
 				>
 					<mat-icon class="right-side-icon">shopping_cart</mat-icon>
+					<div *ngIf="shoppingCart$ | async as shoppingCart" >
+						<ng-container *ngIf="shoppingCart.nbtotalproducts !== 0">
+							<p class="cart-product-counter"> {{ shoppingCart.nbtotalproducts }} </p>
+						</ng-container>
+					</div>
 			</a>
 			</button>
 		</section>

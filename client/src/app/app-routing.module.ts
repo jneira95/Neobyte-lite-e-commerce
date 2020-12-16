@@ -7,11 +7,10 @@ import { ProfileComponent } from './profile/profile.component'
 import { LoginAccessGuard } from './login-access.guard'
 import { AuthGuard } from './auth-access.guard'
 import { ListProductsComponent } from './components/list-products/list-products.component'
-import { HomeComponent } from './components/home/home.component'
 import { CartComponent } from './components/cart/cart.component'
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: '', component: ListProductsComponent, pathMatch: 'full' },
   { path: 'cart', component: CartComponent, pathMatch: 'full' },
   { path: 'detail/:id', component: DetailProductComponent, pathMatch: 'full' },
   {

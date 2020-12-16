@@ -192,3 +192,25 @@ p {
     }
   }
 }
+
+.first-shopping-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .shopping-cart-message {
+    font-size: 20px;
+    line-height: 1.4rem;
+    margin-bottom: 20px;
+  }
+  .first-shoppingcart-btn {
+      cursor: pointer;
+      transition: .1s;
+      font-weight: 600;
+      font-size: 18px;
+      border-radius: 6px;
+      background: #FF7700;
+      color: white;
+      padding: 10px 30px;
+  }
+}
+
