@@ -114,9 +114,13 @@
   <ng-template #loading>
     <app-loading *ngIf="flag && (shoppingCart !== undefined)"></app-loading>
     <section 
-      class="shopping-cart-container"
+      class="shopping-cart-container first-shopping-cart"
       *ngIf="flag && (shoppingCart === undefined)">
-      No hay articulos en la cesta
+      <p class="shopping-cart-message">Aun no tienes articulos en la cesta!</p>
+      <button 
+        class="first-shoppingcart-btn btn"       
+        [routerLink]="['/list']"
+        routerLinkActive="active">Ir de compras!</button>
     </section>
   </ng-template>
 

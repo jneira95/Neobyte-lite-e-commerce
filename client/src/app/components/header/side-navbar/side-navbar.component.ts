@@ -26,7 +26,8 @@ export class SideNavbarComponent {
       categoriesExpand: [
         { name: 'teclados', subRoute: 'keyboard' },
         { name: 'ratones', subRoute: 'mouse' },
-        { name: 'monitores', subRoute: 'monitor' }
+        { name: 'monitores', subRoute: 'monitor' },
+        { name: 'Periféricos', subRoute: '' }
       ]
     },
     {

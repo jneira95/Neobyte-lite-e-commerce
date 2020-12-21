@@ -18,7 +18,7 @@ export class AuthService {
     private userLoginState: UserLoginStateService
   ) {}
 
-  private authEnpoint = 'http://192.168.0.11:5000/user' || 'http://localhost:5000/user'
+  private authEnpoint = 'http://192.168.1.134:5000/user' || 'http://localhost:5000/user'
   private login = '/login'
   private signup = '/signup'
   private profile = '/profile'
